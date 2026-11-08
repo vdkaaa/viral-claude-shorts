@@ -1,0 +1,242 @@
+{
+ "duration": 41.796,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 3.56,
+   "from": 0,
+   "to": 9,
+   "text": "¿Sabías que South Park empezó como una tarjeta de Navidad?",
+   "question": true
+  },
+  {
+   "n": 2,
+   "t0": 4.24,
+   "t1": 9.34,
+   "from": 10,
+   "to": 25,
+   "text": "Verás, en los 90, dos estudiantes, Trey Parker y Matt Stone, hacían cortos con papel recortado.",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 9.62,
+   "t1": 11.88,
+   "from": 26,
+   "to": 31,
+   "text": "Literal, cartulina, tijeras y una cámara.",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 12.32,
+   "t1": 15.36,
+   "from": 32,
+   "to": 44,
+   "text": "Pero un ejecutivo de la tele vio uno y les pidió algo raro.",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 15.68,
+   "t1": 17.78,
+   "from": 45,
+   "to": 52,
+   "text": "Un vídeo navideño para regalarle a sus amigos.",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 18.38,
+   "t1": 21.38,
+   "from": 53,
+   "to": 62,
+   "text": "Así que hicieron una pelea entre Jesús y Santa Claus.",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 22.02,
+   "t1": 23.42,
+   "from": 63,
+   "to": 68,
+   "text": "Y claro, nadie se lo guardó.",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 23.76,
+   "t1": 28.44,
+   "from": 69,
+   "to": 86,
+   "text": "La gente lo copiaba en cintas VHS y lo pasaba de mano en mano, hasta que llegó internet.",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 28.44,
+   "t1": 31.82,
+   "from": 87,
+   "to": 98,
+   "text": "O sea, se hizo viral antes de que existiera la palabra viral.",
+   "question": false
+  },
+  {
+   "n": 10,
+   "t0": 32.34,
+   "t1": 34.52,
+   "from": 99,
+   "to": 105,
+   "text": "Por eso, en la bosta de 1997,",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 34.82,
+   "t1": 36.16,
+   "from": 106,
+   "to": 110,
+   "text": "Comedy Central estrenó la serie.",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 36.62,
+   "t1": 38.14,
+   "from": 111,
+   "to": 116,
+   "text": "Todo por una tarjeta de Navidad.",
+   "question": false
+  },
+  {
+   "n": 13,
+   "t0": 38.6,
+   "t1": 40.04,
+   "from": 117,
+   "to": 124,
+   "text": "¿Tú qué le habrías regalado a tus amigos?",
+   "question": true
+  },
+  {
+   "n": 14,
+   "t0": 40.54,
+   "t1": 41.4,
+   "from": 125,
+   "to": 129,
+   "text": "Te leo en los comentarios.",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 3.56,
+   "t1": 4.24,
+   "dur": 0.68,
+   "after": 9
+  },
+  {
+   "t0": 11.88,
+   "t1": 12.32,
+   "dur": 0.44,
+   "after": 31
+  },
+  {
+   "t0": 15.36,
+   "t1": 15.68,
+   "dur": 0.32,
+   "after": 44
+  },
+  {
+   "t0": 17.78,
+   "t1": 18.38,
+   "dur": 0.6,
+   "after": 52
+  },
+  {
+   "t0": 21.38,
+   "t1": 22.02,
+   "dur": 0.64,
+   "after": 62
+  },
+  {
+   "t0": 23.42,
+   "t1": 23.76,
+   "dur": 0.34,
+   "after": 68
+  },
+  {
+   "t0": 31.82,
+   "t1": 32.34,
+   "dur": 0.52,
+   "after": 98
+  },
+  {
+   "t0": 34.52,
+   "t1": 34.82,
+   "dur": 0.3,
+   "after": 105
+  },
+  {
+   "t0": 36.16,
+   "t1": 36.62,
+   "dur": 0.46,
+   "after": 110
+  },
+  {
+   "t0": 38.14,
+   "t1": 38.6,
+   "dur": 0.46,
+   "after": 116
+  },
+  {
+   "t0": 40.04,
+   "t1": 40.54,
+   "dur": 0.5,
+   "after": 124
+  }
+ ],
+ "numbers": [
+  {
+   "i": 6,
+   "w": "una",
+   "t0": 2.4
+  },
+  {
+   "i": 13,
+   "w": "90,",
+   "t0": 4.92
+  },
+  {
+   "i": 14,
+   "w": "dos",
+   "t0": 5.52
+  },
+  {
+   "i": 30,
+   "w": "una",
+   "t0": 11.4
+  },
+  {
+   "i": 39,
+   "w": "uno",
+   "t0": 13.8
+  },
+  {
+   "i": 56,
+   "w": "una",
+   "t0": 19.06
+  },
+  {
+   "i": 105,
+   "w": "1997,",
+   "t0": 33.28
+  },
+  {
+   "i": 113,
+   "w": "una",
+   "t0": 37.06
+  }
+ ],
+ "words": 130
+}
