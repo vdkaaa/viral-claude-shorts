@@ -11,8 +11,9 @@ import { transformSync } from 'esbuild';
 import type { Adapter, Plan, Words } from '../../core/types.ts';
 
 const HERE = import.meta.dirname, PROJ = path.join(HERE, 'project');
-const HF = path.join(HERE, 'node_modules', '.bin', process.platform === 'win32' ? 'hyperframes.cmd' : 'hyperframes');
-const hf = (args: string[], o: object = {}) => spawnSync(HF, args, { cwd: HERE, encoding: 'utf8', maxBuffer: 1 << 26, ...o });
+// Run the pinned CLI's entry file with this same Node: on Windows, Node refuses to spawn .cmd shims directly (EINVAL).
+const HF = path.join(HERE, 'node_modules', 'hyperframes', 'bin', 'hyperframes.mjs');
+const hf = (args: string[], o: object = {}) => spawnSync(process.execPath, [HF, ...args], { cwd: HERE, encoding: 'utf8', maxBuffer: 1 << 26, ...o });
 const esc = (s: unknown) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
 // state of the background preview server for project/ (null if it isn't running)
