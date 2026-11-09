@@ -1,0 +1,228 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Curiosidad: cada capítulo de South Park se hace en unos seis días (de jueves a miércoles); en 2008 emitieron un capítulo sobre la elección de Obama al día siguiente; documental 6 Days to Air (2011). Arte 100 % original en flat2d: NO dibujar personajes de South Park ni a políticos reales (urna y papeleta genéricas). Objetos: calendario, caracol, cohete, tira de días JUE→MIÉ con barra de progreso, reloj con gotas de sudor, luz ON AIR, periódico, urna de votos, tele, claqueta, póster, rollo de película vs cuaderno de tareas. Fondos azul noche con toques de amarillo. Efectos de sonido en cada objeto.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "SOUTH PARK",
+   "title": "Un capítulo en solo 6 días",
+   "highlight": "días",
+   "visual": "un calendario con un 6 gigante aparece; un reloj de arena gira al lado",
+   "keys": [
+    {
+     "id": "cal",
+     "at": 9,
+     "sfx": [
+      "pop",
+      "ding@0.2"
+     ],
+     "t": 2.22
+    }
+   ],
+   "t0": 0,
+   "t1": 3.43
+  },
+  {
+   "id": "others",
+   "from": 11,
+   "type": "comparison",
+   "label": "OTRAS SERIES",
+   "title": "Otras series tardan meses",
+   "highlight": "meses",
+   "visual": "un caracol arrastra hojas de calendario MESES a la izquierda; a la derecha un cohete SOUTH PARK despega",
+   "keys": [
+    {
+     "id": "snail",
+     "at": 19,
+     "sfx": "boing",
+     "t": 6.24
+    },
+    {
+     "id": "rocket",
+     "at": 24,
+     "sfx": "whoosh",
+     "t": 8.22
+    }
+   ],
+   "t0": 3.43,
+   "t1": 9.59
+  },
+  {
+   "id": "week",
+   "from": 27,
+   "type": "process",
+   "label": "LA SEMANA",
+   "title": "De jueves a miércoles",
+   "highlight": "miércoles",
+   "visual": "una tira de 7 días JUE VIE SÁB DOM LUN MAR MIÉ; una barra amarilla la recorre; al final una tele se enciende",
+   "keys": [
+    {
+     "id": "start",
+     "at": 28,
+     "sfx": "click",
+     "t": 10.02
+    },
+    {
+     "id": "tv",
+     "at": 38,
+     "sfx": "tv",
+     "t": 13.66
+    }
+   ],
+   "t0": 9.59,
+   "t1": 14.71
+  },
+  {
+   "id": "rush",
+   "from": 42,
+   "type": "object",
+   "label": "A VECES",
+   "title": "Terminan horas antes",
+   "highlight": "horas",
+   "visual": "un reloj con las agujas girando rápido y gotas de sudor; una luz roja ON AIR se enciende",
+   "keys": [
+    {
+     "id": "clock",
+     "at": 48,
+     "sfx": "click",
+     "t": 16.62
+    },
+    {
+     "id": "onair",
+     "at": 52,
+     "sfx": "ding",
+     "t": 17.52
+    }
+   ],
+   "t0": 14.71,
+   "t1": 18.51
+  },
+  {
+   "id": "news",
+   "from": 55,
+   "type": "object",
+   "label": "POR ESO",
+   "title": "Noticias de esa misma semana",
+   "highlight": "noticias",
+   "visual": "un periódico entra girando con titular NOTICIAS; alrededor saltan carcajadas JA",
+   "keys": [
+    {
+     "id": "paper",
+     "at": 60,
+     "sfx": "whoosh",
+     "t": 20.04
+    }
+   ],
+   "t0": 18.51,
+   "t1": 22.13
+  },
+  {
+   "id": "election",
+   "from": 65,
+   "type": "comparison",
+   "label": "2008",
+   "title": "Martes: elecciones. Miércoles: capítulo",
+   "highlight": "capítulo",
+   "visual": "a la izquierda una urna recibe un voto con la etiqueta MARTES; a la derecha una tele se enciende con la etiqueta MIÉRCOLES",
+   "keys": [
+    {
+     "id": "vote",
+     "at": 70,
+     "sfx": "pop",
+     "t": 24.2
+    },
+    {
+     "id": "tv",
+     "at": 75,
+     "sfx": "tv",
+     "t": 26
+    }
+   ],
+   "t0": 22.13,
+   "t1": 28.14
+  },
+  {
+   "id": "doc",
+   "from": 82,
+   "type": "object",
+   "label": "EL DOCUMENTAL",
+   "title": "Hasta hicieron un documental",
+   "highlight": "documental",
+   "visual": "una claqueta se cierra; aparece un póster 6 DAYS TO AIR con un reloj",
+   "keys": [
+    {
+     "id": "clap",
+     "at": 85,
+     "sfx": "click",
+     "t": 29.34
+    },
+    {
+     "id": "poster",
+     "at": 90,
+     "sfx": [
+      "pop",
+      "sparkle@0.15"
+     ],
+     "t": 31.22
+    }
+   ],
+   "t0": 28.14,
+   "t1": 32.95
+  },
+  {
+   "id": "homework",
+   "from": 94,
+   "type": "comparison",
+   "label": "O SEA",
+   "title": "Más rápido que tu tarea",
+   "highlight": "tarea",
+   "visual": "un rollo de película con un rayo a la izquierda; un cuaderno de tareas con un caracol encima a la derecha",
+   "keys": [
+    {
+     "id": "reel",
+     "at": 99,
+     "sfx": "whoosh",
+     "t": 34.36
+    },
+    {
+     "id": "snail",
+     "at": 106,
+     "sfx": "boing",
+     "t": 36.12
+    }
+   ],
+   "t0": 32.95,
+   "t1": 37.63
+  },
+  {
+   "id": "closing",
+   "from": 111,
+   "type": "closing",
+   "label": "Y TÚ",
+   "title": "¿Lo dejas para el último día?",
+   "highlight": "último",
+   "visual": "fondo cielo; un calendario con el último día marcado con un círculo rojo; luego burbujas de comentarios",
+   "keys": [
+    {
+     "id": "last",
+     "at": 117,
+     "sfx": "pop",
+     "t": 39.18
+    },
+    {
+     "id": "comments",
+     "at": 119,
+     "sfx": "pop",
+     "t": 40.16
+    }
+   ],
+   "t0": 37.63,
+   "t1": 41.52
+  }
+ ],
+ "duration": 41.52
+}

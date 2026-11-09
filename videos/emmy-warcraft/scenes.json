@@ -1,0 +1,345 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Curiosidad: el episodio de South Park sobre World of Warcraft (Make Love, Not Warcraft, T10E8, 2006) ganó el Emmy 2007 al mejor programa animado, y se hizo dentro del juego real con ayuda de Blizzard. Arte 100 % original en flat2d: NO dibujar personajes de South Park ni de Warcraft, ni el logo de Blizzard, ni la estatuilla del Emmy tal cual (trofeo dorado genérico); los nombres sí, como texto. Niños gamers ORIGINALES (no los de la serie) que se transforman (pálidos, ojeras, granos, gordos). Estética MMO: placas de nombre, barras de vida, números de daño. Objetos: mando, trofeo, tele, avatar encapuchado genérico, lápidas, jabalíes de dibujo, barra de experiencia, silla gamer, calendario, piezas de puzle. Efectos de sonido en cada objeto (campo sfx). Fondos azul noche y morado de videojuego, con toques dorados.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "SOUTH PARK × WARCRAFT",
+   "title": "¿Un videojuego ganó un Emmy?",
+   "highlight": "videojuego",
+   "visual": "un mando de videojuegos aparece; un trofeo dorado sube con brillos a su lado",
+   "keys": [
+    {
+     "id": "game",
+     "at": 4,
+     "sfx": "pop",
+     "t": 1.12
+    },
+    {
+     "id": "award",
+     "at": 5,
+     "sfx": [
+      "whoosh",
+      "ding@0.3"
+     ],
+     "t": 1.74
+    }
+   ],
+   "transition": "cut",
+   "t0": 0,
+   "t1": 3.11
+  },
+  {
+   "id": "episode",
+   "from": 8,
+   "type": "object",
+   "label": "SOUTH PARK · 2006",
+   "title": "Episodio: Make Love, Not Warcraft",
+   "highlight": "Warcraft",
+   "visual": "una tele se enciende y muestra el título MAKE LOVE, NOT WARCRAFT; una etiqueta T10 · E8",
+   "keys": [
+    {
+     "id": "sp",
+     "at": 11,
+     "sfx": "tv@-0.1",
+     "t": 4.94
+    },
+    {
+     "id": "title",
+     "at": 14,
+     "sfx": [
+      "pop",
+      "sparkle@0.2"
+     ],
+     "t": 5.98
+    }
+   ],
+   "transition": "cut",
+   "t0": 3.11,
+   "t1": 7.77
+  },
+  {
+   "id": "villain",
+   "from": 18,
+   "type": "object",
+   "label": "DENTRO DE WORLD OF WARCRAFT",
+   "title": "Un jugador mataba a todos",
+   "highlight": "todos",
+   "visual": "un avatar encapuchado genérico con ojos rojos, espada y placa de nombre roja JUGADOR HOSTIL con barra de vida; aparecen lápidas; sello ¡A TODOS!",
+   "keys": [
+    {
+     "id": "player",
+     "at": 21,
+     "sfx": "pop",
+     "t": 8.94
+    },
+    {
+     "id": "kill",
+     "at": 30,
+     "sfx": [
+      "whoosh@-0.1",
+      "punch",
+      "punch@0.18",
+      "punch@0.36"
+     ],
+     "t": 11.3
+    },
+    {
+     "id": "all",
+     "at": 35,
+     "sfx": "punch",
+     "t": 13
+    }
+   ],
+   "transition": "cut",
+   "t0": 7.77,
+   "t1": 13.83
+  },
+  {
+   "id": "grind",
+   "from": 37,
+   "type": "process",
+   "label": "EL PLAN DE LOS NIÑOS",
+   "title": "Semanas matando jabalíes",
+   "highlight": "jabalíes",
+   "visual": "espada, barra de experiencia; jabalíes de dibujo golpeados con números de daño (-250, ¡CRÍTICO!) y ¡SUBES DE NIVEL!",
+   "keys": [
+    {
+     "id": "kids",
+     "at": 40,
+     "sfx": "whoosh",
+     "t": 14.54
+    },
+    {
+     "id": "level",
+     "at": 47,
+     "sfx": [
+      "pop@-0.3",
+      "grunt@0.32",
+      "grunt@0.57",
+      "grunt@0.82"
+     ],
+     "t": 16.6
+    },
+    {
+     "id": "boars",
+     "at": 52,
+     "sfx": [
+      "punch",
+      "oink@0.04",
+      "punch@0.2",
+      "oink@0.24",
+      "punch@0.4",
+      "oink@0.44",
+      "sparkle@0.5"
+     ],
+     "t": 18.5
+    }
+   ],
+   "transition": "cut",
+   "t0": 13.83,
+   "t1": 19.39
+  },
+  {
+   "id": "chair",
+   "from": 53,
+   "type": "object",
+   "label": "SEMANAS…",
+   "title": "Sin moverse de la silla",
+   "highlight": "silla",
+   "visual": "calendario que pasa hojas; ventana del sótano con montañas nevadas y letrero SOUTH PARK; cuatro niños gamers originales de espaldas en sillas frente a monitores",
+   "keys": [
+    {
+     "id": "weeks",
+     "at": 53,
+     "sfx": [
+      "whoosh@0.4",
+      "whoosh@0.75",
+      "whoosh@1.1",
+      "whoosh@1.45"
+     ],
+     "t": 19.64
+    },
+    {
+     "id": "chair",
+     "at": 58,
+     "sfx": "boing",
+     "t": 21.48
+    }
+   ],
+   "transition": "cut",
+   "t0": 19.39,
+   "t1": 22.35
+  },
+  {
+   "id": "result",
+   "from": 59,
+   "type": "comparison",
+   "label": "LOS NIÑOS DE SOUTH PARK",
+   "title": "Pálidos, gordos… ¡y súper poderosos!",
+   "highlight": "poderosos",
+   "visual": "cuatro niños gamers originales (gorra, audífonos, gafas, moño) con barra de vida: se ponen pálidos con ojeras y la vida baja; granos; engordan con papada; aura dorada, vida dorada y NIVEL MÁX",
+   "keys": [
+    {
+     "id": "pale",
+     "at": 60,
+     "sfx": "boing",
+     "t": 23.16
+    },
+    {
+     "id": "fat",
+     "at": 64,
+     "sfx": [
+      "pop@-0.55",
+      "boing"
+     ],
+     "t": 24.72
+    },
+    {
+     "id": "power",
+     "at": 66,
+     "sfx": [
+      "sparkle",
+      "ding@0.2"
+     ],
+     "t": 25.66
+    }
+   ],
+   "transition": "cut",
+   "t0": 22.35,
+   "t1": 26.82
+  },
+  {
+   "id": "real",
+   "from": 68,
+   "type": "object",
+   "label": "LO MÁS LOCO",
+   "title": "Las escenas del juego eran reales",
+   "highlight": "juego",
+   "visual": "un monitor muestra un mundo de fantasía genérico (castillo y montañas) con un punto REC; una claqueta de cine; sello ¡REAL!",
+   "keys": [
+    {
+     "id": "scenes",
+     "at": 75,
+     "sfx": "click",
+     "t": 28.62
+    },
+    {
+     "id": "real",
+     "at": 77,
+     "sfx": "ding",
+     "t": 29.08
+    }
+   ],
+   "transition": "cut",
+   "t0": 26.82,
+   "t1": 30.11
+  },
+  {
+   "id": "blizzard",
+   "from": 81,
+   "type": "comparison",
+   "label": "EN EQUIPO",
+   "title": "Blizzard ayudó a hacerlas",
+   "highlight": "Blizzard",
+   "visual": "dos piezas de puzle, SOUTH PARK y BLIZZARD, entran desde los lados y encajan con un destello",
+   "keys": [
+    {
+     "id": "blizz",
+     "at": 81,
+     "sfx": "whoosh",
+     "t": 30.36
+    },
+    {
+     "id": "help",
+     "at": 86,
+     "sfx": [
+      "punch",
+      "sparkle@0.1"
+     ],
+     "t": 32.28
+    }
+   ],
+   "transition": "cut",
+   "t0": 30.11,
+   "t1": 34
+  },
+  {
+   "id": "emmy",
+   "from": 92,
+   "type": "stat",
+   "label": "EL PREMIO",
+   "title": "Ganó el Emmy en 2007",
+   "highlight": "2007",
+   "stat": {
+    "value": "2007",
+    "text": "Emmy al mejor programa animado"
+   },
+   "visual": "un trofeo dorado genérico sube a un podio bajo un foco; cae confeti",
+   "keys": [
+    {
+     "id": "stat",
+     "at": 95,
+     "sfx": "whoosh",
+     "t": 34.86
+    },
+    {
+     "id": "win",
+     "at": 96,
+     "sfx": [
+      "sparkle",
+      "jingle@0.1"
+     ],
+     "t": 35.7
+    }
+   ],
+   "transition": "cut",
+   "t0": 34,
+   "t1": 37.84
+  },
+  {
+   "id": "closing",
+   "from": 103,
+   "type": "closing",
+   "label": "O SEA…",
+   "title": "Viciarse sí tiene premio",
+   "highlight": "premio",
+   "visual": "mando = trofeo; un reloj con las agujas girando; bocadillos de comentarios",
+   "keys": [
+    {
+     "id": "prize",
+     "at": 108,
+     "sfx": [
+      "pop@-0.1",
+      "ding@0.15"
+     ],
+     "t": 39.82
+    },
+    {
+     "id": "hours",
+     "at": 110,
+     "sfx": "tape",
+     "t": 40.82
+    },
+    {
+     "id": "comments",
+     "at": 117,
+     "sfx": [
+      "pop@-0.1",
+      "pop@0.1",
+      "pop@0.3"
+     ],
+     "t": 42.46
+    }
+   ],
+   "transition": "cut",
+   "t0": 37.84,
+   "t1": 43.886
+  }
+ ],
+ "duration": 43.886
+}

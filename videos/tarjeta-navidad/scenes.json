@@ -2,7 +2,7 @@
  "style": "flat2d",
  "fps": 30,
  "format": "9:16",
- "notes": "Curiosidad sobre el origen de South Park contada por un narrador. Arte 100 % original en flat2d: NO dibujar a los personajes de la serie ni imitar su estilo; contar la historia con objetos (tarjeta navideña, papel recortado, tijeras, cámara, cintas VHS, tele) y personas genéricas. Tono navideño y divertido: rojos, verdes, nieve, sobre fondos azul noche.",
+ "notes": "Curiosidad sobre el origen de South Park contada por un narrador. Arte 100 % original en flat2d: NO dibujar a los personajes de la serie ni imitar su estilo; contar la historia con objetos (tarjeta navideña, papel recortado, tijeras, cámara, cintas VHS, tele) y personas genéricas. Más South Park por referencias reales: el letrero del pueblo y montañas nevadas de Colorado, los nombres de Trey Parker, Matt Stone y Brian Graden, el título del corto (The Spirit of Christmas, 1995) y SOUTH PARK en la tele del estreno. Efectos de sonido en cada objeto (campo sfx de las claves). Tono navideño y divertido: rojos, verdes, nieve, sobre fondos azul noche.",
  "scenes": [
   {
    "id": "hook",
@@ -11,11 +11,27 @@
    "label": "¿SABÍAS QUE…?",
    "title": "¿South Park empezó como una tarjeta?",
    "highlight": "tarjeta",
-   "visual": "noche nevada; una tarjeta navideña roja aparece, se abre y de dentro sale un gran signo de interrogación",
+   "visual": "noche nevada con montañas; el letrero verde SOUTH PARK · COLORADO aparece; una tarjeta navideña roja aparece, se abre y de dentro sale un gran signo de interrogación",
    "keys": [
+    {
+     "id": "sp",
+     "at": 2,
+     "sfx": "pop",
+     "t": 0.64
+    },
+    {
+     "id": "cardIn",
+     "at": 5,
+     "sfx": "jingle",
+     "t": 1.82
+    },
     {
      "id": "card",
      "at": 7,
+     "sfx": [
+      "whoosh",
+      "pop@0.25"
+     ],
      "t": 2.6
     }
    ],
@@ -27,19 +43,39 @@
    "id": "students",
    "from": 10,
    "type": "object",
-   "label": "LOS 90",
-   "title": "Dos estudiantes y papel recortado",
+   "label": "LOS CREADORES · AÑOS 90",
+   "title": "Trey y Matt: papel recortado",
    "highlight": "papel",
-   "visual": "dos personas genéricas aparecen en una mesa; luego caen recortes de papel de colores",
+   "visual": "montañas recortadas al fondo; dos personas genéricas en una mesa con etiquetas TREY PARKER y MATT STONE; luego caen recortes de papel de colores",
    "keys": [
     {
      "id": "two",
      "at": 14,
+     "sfx": [
+      "pop@-0.05",
+      "pop@0.15"
+     ],
      "t": 5.52
+    },
+    {
+     "id": "trey",
+     "at": 16,
+     "sfx": "ding",
+     "t": 6.34
+    },
+    {
+     "id": "matt",
+     "at": 19,
+     "sfx": "ding",
+     "t": 7.06
     },
     {
      "id": "paper",
      "at": 24,
+     "sfx": [
+      "snip@-0.15",
+      "sparkle@0.05"
+     ],
      "t": 8.5
     }
    ],
@@ -54,21 +90,32 @@
    "label": "HECHO A MANO",
    "title": "Cartulina, tijeras y una cámara",
    "highlight": "cámara",
-   "visual": "tres objetos aparecen uno a uno: una cartulina, unas tijeras que cortan y una cámara",
+   "visual": "tres objetos aparecen uno a uno: una cartulina con montañas nevadas recortadas, unas tijeras que cortan y una cámara que hace foto",
    "keys": [
     {
      "id": "card",
      "at": 27,
+     "sfx": "pop",
      "t": 10.22
     },
     {
      "id": "scissors",
      "at": 28,
+     "sfx": [
+      "pop@-0.1",
+      "snip@0.3",
+      "snip@0.66",
+      "snip@1.0"
+     ],
      "t": 10.86
     },
     {
      "id": "camera",
      "at": 29,
+     "sfx": [
+      "pop@-0.1",
+      "click@0.35"
+     ],
      "t": 11.14
     }
    ],
@@ -80,24 +127,30 @@
    "id": "exec",
    "from": 32,
    "type": "object",
-   "label": "EL ENCARGO",
+   "label": "EL ENCARGO · 1995",
    "title": "Un ejecutivo pidió algo raro",
    "highlight": "raro",
-   "visual": "un ejecutivo con corbata y un bocadillo con interrogación; aparece una cinta de vídeo envuelta como regalo",
+   "visual": "un ejecutivo con corbata y la etiqueta BRIAN GRADEN; un bocadillo con interrogación; aparece una cinta de vídeo envuelta como regalo",
    "keys": [
     {
      "id": "exec",
      "at": 34,
+     "sfx": [
+      "pop@-0.15",
+      "ding@0.3"
+     ],
      "t": 12.66
     },
     {
      "id": "weird",
      "at": 44,
+     "sfx": "boing",
      "t": 14.96
     },
     {
      "id": "gift",
      "at": 46,
+     "sfx": "jingle",
      "t": 15.84
     }
    ],
@@ -112,21 +165,27 @@
    "label": "EL CORTO",
    "title": "Una pelea: Jesús contra Santa",
    "highlight": "pelea",
-   "visual": "dos tarjetas enfrentadas con un VS: una con una aureola dorada y otra con un gorro de Santa; chocan",
+   "visual": "cartel THE SPIRIT OF CHRISTMAS (1995); dos tarjetas enfrentadas con un VS: una con una aureola dorada y otra con un gorro de Santa; chocan",
    "keys": [
     {
      "id": "fight",
      "at": 57,
+     "sfx": "ding",
      "t": 19.26
     },
     {
      "id": "jesus",
      "at": 59,
+     "sfx": "whoosh@-0.05",
      "t": 20.18
     },
     {
      "id": "santa",
      "at": 61,
+     "sfx": [
+      "whoosh@-0.05",
+      "punch@0.25"
+     ],
      "t": 20.88
     }
    ],
@@ -141,26 +200,34 @@
    "label": "DE MANO EN MANO",
    "title": "Copiado en cintas VHS",
    "highlight": "VHS",
-   "visual": "una cinta VHS se multiplica en muchas copias que viajan con flechas; al final aparece un icono de internet",
+   "visual": "una cinta VHS con la etiqueta SPIRIT OF XMAS se multiplica en muchas copias que viajan con flechas; al final aparece un icono de internet",
    "keys": [
     {
      "id": "nobody",
      "at": 65,
+     "sfx": "tape@0.05",
      "t": 22.64
     },
     {
      "id": "vhs",
      "at": 75,
+     "sfx": [
+      "pop",
+      "pop@0.1",
+      "pop@0.2"
+     ],
      "t": 25.04
     },
     {
      "id": "hand",
      "at": 80,
+     "sfx": "whoosh@0.1",
      "t": 26.6
     },
     {
      "id": "web",
      "at": 83,
+     "sfx": "sparkle",
      "t": 27.38
     }
    ],
@@ -180,11 +247,13 @@
     {
      "id": "viral",
      "at": 91,
+     "sfx": "sparkle",
      "t": 29.58
     },
     {
      "id": "word",
      "at": 97,
+     "sfx": "boing",
      "t": 31.02
     }
    ],
@@ -197,22 +266,27 @@
    "from": 99,
    "type": "stat",
    "label": "EL ESTRENO",
-   "title": "Llega a Comedy Central",
+   "title": "South Park llega a Comedy Central",
    "highlight": "Central",
    "stat": {
     "value": "1997",
     "text": "13 de agosto: se estrena la serie"
    },
-   "visual": "una tele antigua se enciende con barras de color y luego una estrella; un calendario pasa sus hojas",
+   "visual": "una tele antigua se enciende con barras de color y luego muestra montañas nevadas y el nombre SOUTH PARK",
    "keys": [
     {
      "id": "stat",
      "at": 105,
+     "sfx": "tv@-0.1",
      "t": 33.28
     },
     {
      "id": "on",
      "at": 108,
+     "sfx": [
+      "sparkle",
+      "ding@0.1"
+     ],
      "t": 35.38
     }
    ],
@@ -224,24 +298,36 @@
    "id": "closing",
    "from": 111,
    "type": "closing",
-   "label": "TODO POR ESTO",
+   "label": "ASÍ NACIÓ SOUTH PARK",
    "title": "Todo por una tarjeta de Navidad",
    "highlight": "Navidad",
-   "visual": "la tarjeta navideña de nuevo, con nieve; aparecen bocadillos de comentarios",
+   "visual": "la tarjeta navideña de nuevo, con nieve y montañas; aparecen bocadillos de comentarios",
    "keys": [
     {
      "id": "card",
      "at": 114,
+     "sfx": [
+      "whoosh",
+      "jingle@0.2"
+     ],
      "t": 37.2
     },
     {
      "id": "ask",
      "at": 117,
+     "sfx": [
+      "pop@-0.1",
+      "pop@0.15"
+     ],
      "t": 38.6
     },
     {
      "id": "comments",
      "at": 125,
+     "sfx": [
+      "pop@-0.1",
+      "pop@0.1"
+     ],
      "t": 40.54
     }
    ],

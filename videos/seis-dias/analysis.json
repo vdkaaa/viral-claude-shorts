@@ -1,0 +1,228 @@
+{
+ "duration": 41.52,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 2.96,
+   "from": 0,
+   "to": 10,
+   "text": "Un capítulo de South Park se hace en solo seis días.",
+   "question": false
+  },
+  {
+   "n": 2,
+   "t0": 3.68,
+   "t1": 7.88,
+   "from": 11,
+   "to": 23,
+   "text": "Verás, la mayoría de las series animadas tardan meses en terminar un episodio.",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 8.22,
+   "t1": 9.26,
+   "from": 24,
+   "to": 26,
+   "text": "South Park no.",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 9.84,
+   "t1": 11.62,
+   "from": 27,
+   "to": 32,
+   "text": "El jueves empiezan casi sin guión,",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 11.96,
+   "t1": 14.36,
+   "from": 33,
+   "to": 41,
+   "text": "y el miércoles siguiente ya está en la tele.",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 14.96,
+   "t1": 18.2,
+   "from": 42,
+   "to": 54,
+   "text": "Pero a veces terminan apenas unas horas antes de que salga el aire.",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 18.76,
+   "t1": 21.76,
+   "from": 55,
+   "to": 64,
+   "text": "Por eso pueden burlarse de noticias de esa misma semana.",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 22.38,
+   "t1": 23.08,
+   "from": 65,
+   "to": 66,
+   "text": "En 2008,",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 23.38,
+   "t1": 28.1,
+   "from": 67,
+   "to": 81,
+   "text": "Obama ganó las elecciones un martes, y el miércoles ya había un capítulo sobre eso.",
+   "question": false
+  },
+  {
+   "n": 10,
+   "t0": 28.1,
+   "t1": 30.44,
+   "from": 82,
+   "to": 87,
+   "text": "Hasta hicieron un documental del caos.",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 30.86,
+   "t1": 32.66,
+   "from": 88,
+   "to": 93,
+   "text": "Se llama 6 days to air.",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 33.2,
+   "t1": 37.34,
+   "from": 94,
+   "to": 110,
+   "text": "O sea, ellos hacen un capítulo en menos tiempo del que tú tardas en hacer una tarea.",
+   "question": false
+  },
+  {
+   "n": 13,
+   "t0": 37.88,
+   "t1": 39.72,
+   "from": 111,
+   "to": 118,
+   "text": "¿También no dejas todo para el último día?",
+   "question": true
+  },
+  {
+   "n": 14,
+   "t0": 40.16,
+   "t1": 41.18,
+   "from": 119,
+   "to": 122,
+   "text": "Cuéntamelo en los comentarios.",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 2.96,
+   "t1": 3.68,
+   "dur": 0.72,
+   "after": 10
+  },
+  {
+   "t0": 7.88,
+   "t1": 8.22,
+   "dur": 0.34,
+   "after": 23
+  },
+  {
+   "t0": 9.26,
+   "t1": 9.84,
+   "dur": 0.58,
+   "after": 26
+  },
+  {
+   "t0": 11.62,
+   "t1": 11.96,
+   "dur": 0.34,
+   "after": 32
+  },
+  {
+   "t0": 14.36,
+   "t1": 14.96,
+   "dur": 0.6,
+   "after": 41
+  },
+  {
+   "t0": 18.2,
+   "t1": 18.76,
+   "dur": 0.56,
+   "after": 54
+  },
+  {
+   "t0": 21.76,
+   "t1": 22.38,
+   "dur": 0.62,
+   "after": 64
+  },
+  {
+   "t0": 23.08,
+   "t1": 23.38,
+   "dur": 0.3,
+   "after": 66
+  },
+  {
+   "t0": 30.44,
+   "t1": 30.86,
+   "dur": 0.42,
+   "after": 87
+  },
+  {
+   "t0": 32.66,
+   "t1": 33.2,
+   "dur": 0.54,
+   "after": 93
+  },
+  {
+   "t0": 37.34,
+   "t1": 37.88,
+   "dur": 0.54,
+   "after": 110
+  },
+  {
+   "t0": 39.72,
+   "t1": 40.16,
+   "dur": 0.44,
+   "after": 118
+  }
+ ],
+ "numbers": [
+  {
+   "i": 9,
+   "w": "seis",
+   "t0": 2.22
+  },
+  {
+   "i": 66,
+   "w": "2008,",
+   "t0": 22.58
+  },
+  {
+   "i": 90,
+   "w": "6",
+   "t0": 31.22
+  },
+  {
+   "i": 109,
+   "w": "una",
+   "t0": 36.84
+  }
+ ],
+ "words": 123
+}

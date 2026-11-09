@@ -1,0 +1,226 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Curiosidad: South Park: Bigger, Longer & Uncut (1999) tiene 399 groserías y Guinness la registró (edición 2001) como la película animada con más palabrotas; casi la censuran y aun así su canción fue nominada al Oscar. Arte 100 % original en flat2d: NO dibujar personajes de South Park ni la estatuilla del Oscar tal cual (trofeo dorado genérico). Las groserías se muestran SOLO como símbolos censurados (#@$%!), nunca palabras reales. Objetos: medalla de récord, burbujas #@$%!, rollo de película, póster que se estira, pantalla de cine, siluetas de niños, reloj, libro de récords, cinta CENSURADO, trofeo, cara con cremallera. Fondos azul noche y morado con amarillo. Efectos de sonido en cada objeto.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "SOUTH PARK: LA PELÍCULA",
+   "title": "Un récord Guinness… por groserías",
+   "highlight": "groserías",
+   "visual": "una medalla dorada RÉCORD aparece; una burbuja #@$%! estalla a su lado",
+   "keys": [
+    {
+     "id": "medal",
+     "at": 7,
+     "sfx": [
+      "pop",
+      "ding@0.2"
+     ],
+     "t": 1.48
+    },
+    {
+     "id": "swear",
+     "at": 11,
+     "sfx": "punch",
+     "t": 3.44
+    }
+   ],
+   "t0": 0,
+   "t1": 4.41
+  },
+  {
+   "id": "movie",
+   "from": 12,
+   "type": "object",
+   "label": "1999",
+   "title": "Más grande, más largo y sin cortes",
+   "highlight": "cortes",
+   "visual": "un póster de película aparece; crece (más grande), se estira hacia abajo (más largo) y unas tijeras tachadas aparecen (sin cortes)",
+   "keys": [
+    {
+     "id": "poster",
+     "at": 15,
+     "sfx": "pop",
+     "t": 6.08
+    },
+    {
+     "id": "big",
+     "at": 17,
+     "sfx": "boing",
+     "t": 7.64
+    },
+    {
+     "id": "long",
+     "at": 19,
+     "sfx": "boing",
+     "t": 8.44
+    }
+   ],
+   "t0": 4.41,
+   "t1": 9.91
+  },
+  {
+   "id": "story",
+   "from": 23,
+   "type": "process",
+   "label": "LA HISTORIA",
+   "title": "Los niños repiten los insultos",
+   "highlight": "insultos",
+   "visual": "una pantalla de cine con una burbuja #@$%!; luego tres siluetas de niños con burbujas #@! saltan",
+   "keys": [
+    {
+     "id": "screen",
+     "at": 34,
+     "sfx": "tv",
+     "t": 12.68
+    },
+    {
+     "id": "kids",
+     "at": 39,
+     "sfx": [
+      "pop",
+      "pop@0.12",
+      "pop@0.24"
+     ],
+     "t": 14.38
+    }
+   ],
+   "t0": 9.91,
+   "t1": 16.05
+  },
+  {
+   "id": "count",
+   "from": 42,
+   "type": "stat",
+   "label": "LA CUENTA",
+   "title": "Tiene 399 groserías",
+   "highlight": "groserías",
+   "stat": {
+    "value": "399",
+    "text": "groserías"
+   },
+   "visual": "burbujas #@$%! llueven por la pantalla; un reloj con la etiqueta ≈5 POR MINUTO",
+   "keys": [
+    {
+     "id": "stat",
+     "at": 49,
+     "sfx": [
+      "punch",
+      "ding@0.2"
+     ],
+     "t": 17.82
+    },
+    {
+     "id": "minute",
+     "at": 52,
+     "sfx": "click",
+     "t": 20.4
+    }
+   ],
+   "t0": 16.05,
+   "t1": 21.65
+  },
+  {
+   "id": "book",
+   "from": 55,
+   "type": "object",
+   "label": "GUINNESS · 2001",
+   "title": "Entró al libro de récords",
+   "highlight": "libro",
+   "visual": "un libro gordo se abre; sale una cinta dorada #1 MÁS PALABROTAS",
+   "keys": [
+    {
+     "id": "book",
+     "at": 59,
+     "sfx": "whoosh",
+     "t": 22.6
+    },
+    {
+     "id": "ribbon",
+     "at": 64,
+     "sfx": "sparkle",
+     "t": 23.76
+    }
+   ],
+   "t0": 21.65,
+   "t1": 25.42
+  },
+  {
+   "id": "irony",
+   "from": 68,
+   "type": "comparison",
+   "label": "LO MÁS IRÓNICO",
+   "title": "Censurada… y nominada al Oscar",
+   "highlight": "nominada",
+   "visual": "el póster recibe una cinta amarilla CENSURADO en X; luego un trofeo dorado sube a su lado",
+   "keys": [
+    {
+     "id": "tape",
+     "at": 73,
+     "sfx": "punch",
+     "t": 27.38
+    },
+    {
+     "id": "oscar",
+     "at": 83,
+     "sfx": [
+      "whoosh",
+      "sparkle@0.2"
+     ],
+     "t": 30.68
+    }
+   ],
+   "t0": 25.42,
+   "t1": 31.89
+  },
+  {
+   "id": "critic",
+   "from": 86,
+   "type": "object",
+   "label": "O SEA",
+   "title": "Critica la censura… con groserías",
+   "highlight": "censura",
+   "visual": "una barra negra de censura intenta tapar burbujas #@$%! y se rompe en pedazos",
+   "keys": [
+    {
+     "id": "break",
+     "at": 94,
+     "sfx": "punch",
+     "t": 34.34
+    }
+   ],
+   "t0": 31.89,
+   "t1": 37.13
+  },
+  {
+   "id": "closing",
+   "from": 100,
+   "type": "closing",
+   "label": "Y TÚ",
+   "title": "¿Cuál es la que más dices tú?",
+   "highlight": "dices",
+   "visual": "fondo cielo; una cara redonda con la boca cerrada con cremallera; luego burbujas de comentarios",
+   "keys": [
+    {
+     "id": "zip",
+     "at": 108,
+     "sfx": "snip",
+     "t": 39.5
+    },
+    {
+     "id": "comments",
+     "at": 110,
+     "sfx": "pop",
+     "t": 39.72
+    }
+   ],
+   "t0": 37.13,
+   "t1": 41.12
+  }
+ ],
+ "duration": 41.12
+}

@@ -27,3 +27,5 @@ videos/hello/
 # final videos go in GitHub releases, not in the repo
 videos/*/final.mp4
 .DS_Store
+# secrets (API keys)
+.env

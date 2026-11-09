@@ -51,6 +51,108 @@ function f2Person(id: string, x: number, y: number, s = 1) {   // a simple perso
 // pops an element in (scale 0 -> 1 with a little bounce): the most common entrance
 const f2Pop = (tl: gsap.core.Timeline, sel: string, t: number, d = 0.45) => tl.fromTo(sel, { scale: 0, transformOrigin: '50% 50%' }, { scale: 1, duration: d, ease: 'back.out(2)' }, t);
 
+// ---------- shared props (used by several videos) ----------
+const F2FONT = 'font-family="Nunito, Avenir Next, Arial, sans-serif" font-weight="900"';
+const f2Txt = (x: number, y: number, size: number, fill: string, t: string, extra = '') => `<text x="${x}" y="${y}" text-anchor="middle" font-size="${size}" fill="${fill}" ${F2FONT} ${extra}>${t}</text>`;
+const F2OUTLINE = 'stroke="#14213d" stroke-width="10" paint-order="stroke"';
+// how many repeats of a loop of length `per` fill `d` seconds (for yoyo/repeat loops that must not outlive the scene)
+const f2Reps = (d: number, per: number) => Math.max(0, Math.ceil(d / per) - 1);
+// deterministic background stars in the art area
+const f2Stars = (n = 22) => [...Array(n)].map((_, i) => `<circle cx="${(i * 197) % 1080}" cy="${640 + ((i * 331) % 860)}" r="${2 + (i % 3)}" fill="#fff" opacity="0.25"/>`).join('');
+// a retro TV; screen spans x -262..198, y -184..146 (local). Put f2Static() first in `screen` for the static (class "static").
+function f2Tv(id: string, x: number, y: number, s: number, screen: string) {
+  return `<g id="${id}"><g transform="translate(${x} ${y}) scale(${s})">
+    <line x1="-30" y1="-210" x2="-120" y2="-310" stroke="${F2.gray}" stroke-width="10" stroke-linecap="round"/><line x1="30" y1="-210" x2="120" y2="-310" stroke="${F2.gray}" stroke-width="10" stroke-linecap="round"/>
+    <rect x="-280" y="-196" width="580" height="380" rx="40" fill="#000" opacity="0.2"/><rect x="-290" y="-210" width="580" height="380" rx="40" fill="#a0673a"/>
+    <rect x="-262" y="-184" width="460" height="330" rx="24" fill="#0b1226"/>${screen}
+    <circle cx="242" cy="-110" r="24" fill="#7c4a25"/><circle cx="242" cy="-30" r="24" fill="#7c4a25"/></g></g>`;
+}
+const f2Static = () => `<g class="static">${[...Array(12)].map((_, i) => `<rect x="-262" y="${-184 + i * 27.5}" width="460" height="14" fill="#fff" opacity="${0.08 + (i % 3) * 0.08}"/>`).join('')}</g>`;
+// a generic gold trophy with a star and a plate (never a real award statuette)
+function f2Trophy(id: string, x: number, y: number, s = 1, plate = '') {
+  return `<g id="${id}"><g transform="translate(${x} ${y}) scale(${s})">
+    <path d="M-100 -150 L100 -150 Q100 10 0 40 Q-100 10 -100 -150Z" fill="#ffc83d"/><path d="M0 -150 L100 -150 Q100 10 0 40Z" fill="#e0a21f"/>
+    <path d="M-100 -120 Q-170 -120 -160 -60 Q-150 -10 -80 -10" fill="none" stroke="#ffc83d" stroke-width="22"/>
+    <path d="M100 -120 Q170 -120 160 -60 Q150 -10 80 -10" fill="none" stroke="#e0a21f" stroke-width="22"/>
+    <rect x="-22" y="30" width="44" height="60" fill="#e0a21f"/><rect x="-100" y="86" width="200" height="70" rx="12" fill="#2b2d42"/>
+    ${plate ? f2Txt(0, 134, 36, '#ffc83d', plate) : ''}
+    <path d="M0 -122 L14 -88 L50 -88 L22 -66 L32 -30 L0 -52 L-32 -30 L-22 -66 L-50 -88 L-14 -88Z" fill="#fff" opacity="0.9"/></g></g>`;
+}
+// a rubber stamp (animate it with scale 2 -> 1 for the "thump")
+function f2Stamp(id: string, x: number, y: number, t: string, c: string, rot = -10, w = 420, size = 74) {
+  return `<g id="${id}"><g transform="translate(${x} ${y}) rotate(${rot})"><rect x="${-w / 2}" y="-62" width="${w}" height="124" rx="22" fill="none" stroke="${c}" stroke-width="12"/>${f2Txt(0, size * 0.38, size, c, t)}</g></g>`;
+}
+// a comment bubble with "..." (or a short text)
+function f2Bubble(id: string, x: number, y: number, s: number, c: string, t = '') {
+  return `<g id="${id}"><g transform="translate(${x} ${y}) scale(${s})"><rect x="-110" y="-70" width="220" height="130" rx="40" fill="${c}"/><path d="M-50 50 L-80 100 L-10 56 Z" fill="${c}"/>
+    ${t ? f2Txt(0, 14, 50, F2.night, t) : `<circle cx="-50" cy="-5" r="14" fill="${F2.night}"/><circle cx="0" cy="-5" r="14" fill="${F2.night}"/><circle cx="50" cy="-5" r="14" fill="${F2.night}"/>`}</g></g>`;
+}
+function f2Grave(id: string, x: number, y: number, s = 1, t = 'RIP') {
+  return `<g id="${id}"><g transform="translate(${x} ${y}) scale(${s})"><path d="M-80 80 L-80 -50 Q-80 -110 0 -110 Q80 -110 80 -50 L80 80Z" fill="#8d99ae"/><path d="M14 80 L14 -108 Q80 -100 80 -50 L80 80Z" fill="#6c7891"/>
+    ${f2Txt(0, 0, 46, '#4a5368', t)}<rect x="-104" y="74" width="208" height="26" rx="10" fill="#5a6378"/></g></g>`;
+}
+// falling confetti: animate ".drop" (y) and ".bit" (rotation)
+function f2Confetti(id: string, n: number, y0: number, h: number) {
+  return `<g id="${id}">${[...Array(n)].map((_, i) => {
+    const x = 100 + ((i * 0.618034) % 1) * 800, y = y0 + ((i * 0.7548777) % 1) * h, c = RAINBOW[(i * 5) % RAINBOW.length], r = (i * 47) % 180;
+    const sh = i % 3 === 0 ? `<rect x="-22" y="-12" width="44" height="24" rx="6" fill="${c}"/>` : i % 3 === 1 ? `<circle r="16" fill="${c}"/>` : `<path d="M0 -21 L19 14 L-19 14Z" fill="${c}"/>`;
+    return `<g transform="translate(${x} ${y})"><g class="drop"><g class="bit" transform="rotate(${r})">${sh}</g></g></g>`;
+  }).join('')}</g>`;
+}
+// a wall calendar page: `big` is the big text (a day number or word), `top` the header
+function f2Calendar(id: string, x: number, y: number, s: number, top: string, big: string, c = F2.red) {
+  return `<g id="${id}"><g transform="translate(${x} ${y}) scale(${s})"><rect x="-150" y="-170" width="300" height="340" rx="26" fill="#000" opacity="0.2" transform="translate(10 12)"/>
+    <rect x="-150" y="-170" width="300" height="340" rx="26" fill="#fff"/><rect x="-150" y="-170" width="300" height="90" rx="26" fill="${c}"/><rect x="-150" y="-110" width="300" height="30" fill="${c}"/>
+    ${f2Txt(0, -110, 44, '#fff', top)}${f2Txt(0, 70, 150, F2.night, big)}<circle cx="-80" cy="-170" r="14" fill="#555b6e"/><circle cx="80" cy="-170" r="14" fill="#555b6e"/></g></g>`;
+}
+
+// ---------- recurring cartoon creators (original design; head top flips up to talk) ----------
+// f2Toon: origin at the feet, ~600 units tall. Animatable parts (local pivots):
+//   .top (head top; pivot -125 -470, use f2Talk)  .eyes (f2Blink)  .spir (spiral eyes, hidden)  .armL/.armR (pivots -88 -312 / 88 -312)
+//   .dr (dress, only if `dress` is given)
+type F2Hair = 'spiky' | 'curly';
+function f2Toon(id: string, x: number, y: number, s: number, hair: F2Hair, suit = '#2b2d42', dress?: [string, string]) {
+  const SK = '#f2c29b', SKD = '#e3a77b';
+  const h = hair === 'spiky'
+    ? `<path d="M-110 -540 L-96 -610 L-62 -566 L-40 -628 L-10 -572 L18 -632 L40 -570 L72 -620 L84 -560 L112 -590 L112 -530 Q0 -600 -110 -540Z" fill="#3b2a24"/>`
+    : [[-92, -548, 34], [-50, -584, 38], [0, -598, 40], [50, -584, 38], [92, -548, 34], [-20, -560, 30], [30, -562, 30]].map(([cx, cy, r]) => `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#8a5a33"/>`).join('');
+  const dr = dress ? `<g class="dr"><path d="M-46 -330 L46 -330 L58 -236 L132 0 L-132 0 L-58 -236Z" fill="${dress[0]}"/><path d="M0 -330 L46 -330 L58 -236 L132 0 L0 0Z" fill="${dress[1]}"/>
+      <rect x="-60" y="-246" width="120" height="20" rx="10" fill="#fff" opacity="0.5"/></g>` : '';
+  return `<g id="${id}"><g transform="translate(${x} ${y}) scale(${s})">
+    <ellipse cx="0" cy="8" rx="130" ry="16" fill="#000" opacity="0.2"/>
+    <rect x="-52" y="-120" width="38" height="118" rx="14" fill="#1d2235"/><rect x="14" y="-120" width="38" height="118" rx="14" fill="#1d2235"/>
+    <ellipse cx="-38" cy="-4" rx="34" ry="14" fill="#111"/><ellipse cx="38" cy="-4" rx="34" ry="14" fill="#111"/>
+    <g class="armL"><rect x="-108" y="-326" width="40" height="90" rx="20" fill="${suit}"/><rect x="-104" y="-256" width="32" height="96" rx="16" fill="${SK}"/><circle cx="-88" cy="-160" r="22" fill="${SK}"/></g>
+    <g class="armR"><rect x="68" y="-326" width="40" height="90" rx="20" fill="${suit}"/><rect x="72" y="-256" width="32" height="96" rx="16" fill="${SK}"/><circle cx="88" cy="-160" r="22" fill="${SK}"/></g>
+    <rect x="-76" y="-340" width="152" height="240" rx="46" fill="${suit}"/>
+    <path d="M-30 -340 L0 -280 L30 -340Z" fill="#fff"/><path d="M-10 -330 L10 -330 L14 -250 L0 -236 L-14 -250Z" fill="${F2.red}"/>${dr}
+    <path d="M-125 -470 A125 115 0 0 0 125 -470Z" fill="${SK}"/><path d="M40 -470 L125 -470 A125 115 0 0 1 40 -362Z" fill="${SKD}" opacity="0.5"/>
+    <circle cx="-70" cy="-430" r="16" fill="#ff9aa2" opacity="0.6"/><circle cx="70" cy="-430" r="16" fill="#ff9aa2" opacity="0.6"/>
+    <path d="M-112 -470 A112 64 0 0 1 112 -470Z" fill="#7a2f2f"/><path d="M-96 -470 L96 -470 L90 -456 L-90 -456Z" fill="#fff"/>
+    <g class="top"><path d="M-125 -470 A125 115 0 0 1 125 -470Z" fill="${SK}"/><rect x="-125" y="-474" width="250" height="6" rx="3" fill="${SKD}"/>${h}
+      <path d="M-66 -560 L-20 -552 M20 -552 L66 -560" stroke="#3b2a24" stroke-width="9" stroke-linecap="round"/>
+      <g class="eyes"><ellipse cx="-40" cy="-516" rx="24" ry="28" fill="#fff"/><ellipse cx="40" cy="-516" rx="24" ry="28" fill="#fff"/><circle cx="-34" cy="-510" r="11" fill="#111"/><circle cx="34" cy="-510" r="11" fill="#111"/></g>
+      <g class="spir" opacity="0">${[-40, 40].map((ex) => `<g class="sp"><circle cx="${ex}" cy="-516" r="26" fill="#fff"/><path d="M${ex} -516 m-4 0 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0 a12 12 0 1 1 24 0 a16 16 0 1 1 -32 0" stroke="#8b6cff" stroke-width="5" fill="none"/></g>`).join('')}</g></g></g></g>`;
+}
+// the head top flaps for `dur` seconds and always ends closed
+function f2Talk(tl: gsap.core.Timeline, sel: string, t: number, dur: number, sp = 0.13, ang = -16) {
+  let n = Math.floor(dur / sp); if (n % 2 === 1) n -= 1; if (n < 2) return;   // even number of half-flaps -> odd yoyo repeats -> ends closed
+  tl.fromTo(`${sel} .top`, { rotation: 0, svgOrigin: '-125 -470' }, { rotation: ang, svgOrigin: '-125 -470', duration: sp, yoyo: true, repeat: n - 1, ease: 'sine.inOut', immediateRender: false }, t);
+}
+function f2Blink(tl: gsap.core.Timeline, sel: string, times: number[]) {
+  times.forEach((t) => tl.to(`${sel} .eyes`, { scaleY: 0.1, transformOrigin: '50% 50%', duration: 0.07, yoyo: true, repeat: 1 }, t));
+}
+// rotate an arm to `ang` degrees (L: positive = up/out, R: negative = up/out)
+function f2Arm(tl: gsap.core.Timeline, sel: string, side: 'L' | 'R', t: number, ang: number, d = 0.3) {
+  tl.to(`${sel} .arm${side}`, { rotation: ang, svgOrigin: side === 'L' ? '-88 -312' : '88 -312', duration: d, ease: 'back.out(2)' }, t);
+}
+// an arm swings between `a` and `b` degrees for `dur` seconds (typing, waving, flailing), then rests
+function f2Swing(tl: gsap.core.Timeline, sel: string, side: 'L' | 'R', t: number, dur: number, a: number, b: number, sp = 0.15) {
+  const o = side === 'L' ? '-88 -312' : '88 -312';
+  tl.fromTo(`${sel} .arm${side}`, { rotation: a, svgOrigin: o }, { rotation: b, svgOrigin: o, duration: sp, yoyo: true, repeat: f2Reps(dur, sp) | 1, ease: 'sine.inOut', immediateRender: false }, t);
+  tl.to(`${sel} .arm${side}`, { rotation: 0, svgOrigin: o, duration: 0.2 }, t + dur);
+}
+
 // generic scenes by type: { bg?, ink?, html(s), anim(tl, s, K, $) }. On a light background set ink: F2.night.
 const LIBRARY: Record<string, Visual> = {
   question: { html: () => svg(`${f2Sun('sun', 540, 1000, 120)}`), anim: (tl, s, K, $) => tl.fromTo($('#sun'), { scale: 0, transformOrigin: '50% 50%' }, { scale: 1, duration: 0.6, ease: 'back.out(2)' }, s.t0 + 0.2) },

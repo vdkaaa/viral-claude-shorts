@@ -1,0 +1,230 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Curiosidad: Kenny moría en casi todos los capítulos de las primeras temporadas; en 2001 (Kenny Dies, T5E13) lo mataron 'para siempre' y volvió sin explicación al final de la temporada 6 (Red Sleigh Down). Arte en flat2d: un niño con parka naranja y capucha cerrada (evoca al personaje sin copiar el dibujo de la serie). Nada de sangre: muertes cómicas con iconos (yunque, llamas, ratas). Objetos: lápida, termómetro, calendario, tele, guion con ZZZ, corazones de vidas, burbujas. Fondos azul noche y morado. Efectos de sonido en cada objeto.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "SOUTH PARK",
+   "title": "¿Mataron a Kenny para siempre?",
+   "highlight": "siempre",
+   "visual": "el niño de parka naranja aparece; cae una lápida con el símbolo infinito a su lado",
+   "keys": [
+    {
+     "id": "kid",
+     "at": 6,
+     "sfx": "pop",
+     "t": 1.4
+    },
+    {
+     "id": "forever",
+     "at": 8,
+     "sfx": "punch",
+     "t": 2.5
+    }
+   ],
+   "t0": 0,
+   "t1": 3.57
+  },
+  {
+   "id": "tally",
+   "from": 9,
+   "type": "stat",
+   "label": "TEMPORADAS 1 A 5",
+   "title": "Moría en casi todos los capítulos",
+   "highlight": "capítulos",
+   "visual": "una pizarra con palitos de conteo que se van sumando; mini lápidas aparecen en fila",
+   "keys": [
+    {
+     "id": "count",
+     "at": 14,
+     "sfx": "click",
+     "t": 5.42
+    }
+   ],
+   "t0": 3.57,
+   "t1": 7.56
+  },
+  {
+   "id": "deaths",
+   "from": 20,
+   "type": "process",
+   "label": "MUERTES CÓMICAS",
+   "title": "Aplastado, quemado… y volvía",
+   "highlight": "volvía",
+   "visual": "tres iconos aparecen uno a uno: un yunque, llamas, una rata; luego el niño de parka reaparece de un salto con brillos",
+   "keys": [
+    {
+     "id": "anvil",
+     "at": 20,
+     "sfx": "punch",
+     "t": 7.76
+    },
+    {
+     "id": "fire",
+     "at": 21,
+     "sfx": "whoosh",
+     "t": 8.6
+    },
+    {
+     "id": "rats",
+     "at": 24,
+     "sfx": "pop",
+     "t": 9.64
+    },
+    {
+     "id": "back",
+     "at": 29,
+     "sfx": [
+      "boing",
+      "sparkle@0.2"
+     ],
+     "t": 11.28
+    }
+   ],
+   "t0": 7.56,
+   "t1": 12.67
+  },
+  {
+   "id": "phrase",
+   "from": 33,
+   "type": "object",
+   "label": "LA FRASE",
+   "title": "«¡Dios mío, mataron a Kenny!»",
+   "highlight": "Kenny",
+   "visual": "una burbuja de diálogo gigante con ¡DIOS MÍO! aparece; luego estrellas y una placa #1 FRASE MÁS FAMOSA",
+   "keys": [
+    {
+     "id": "shout",
+     "at": 33,
+     "sfx": "punch",
+     "t": 12.92
+    },
+    {
+     "id": "famous",
+     "at": 43,
+     "sfx": [
+      "ding",
+      "sparkle@0.1"
+     ],
+     "t": 15.82
+    }
+   ],
+   "t0": 12.67,
+   "t1": 17.03
+  },
+  {
+   "id": "bored",
+   "from": 47,
+   "type": "object",
+   "label": "2001",
+   "title": "Se aburrieron del chiste",
+   "highlight": "chiste",
+   "visual": "una hoja de guion con ZZZ flotando; luego una tele se enciende con el título KENNY DIES",
+   "keys": [
+    {
+     "id": "zzz",
+     "at": 51,
+     "sfx": "boing",
+     "t": 18.32
+    },
+    {
+     "id": "tv",
+     "at": 59,
+     "sfx": "tv",
+     "t": 20.88
+    }
+   ],
+   "t0": 17.03,
+   "t1": 21.73
+  },
+  {
+   "id": "dies",
+   "from": 61,
+   "type": "process",
+   "label": "KENNY DIES",
+   "title": "Muere… de verdad",
+   "highlight": "verdad",
+   "visual": "el niño con un termómetro; se desvanece y cae una lápida; luego hojas de calendario vuelan: 1 AÑO",
+   "keys": [
+    {
+     "id": "sick",
+     "at": 63,
+     "sfx": "pop",
+     "t": 22.34
+    },
+    {
+     "id": "grave",
+     "at": 65,
+     "sfx": "punch",
+     "t": 23.04
+    },
+    {
+     "id": "year",
+     "at": 72,
+     "sfx": "whoosh",
+     "t": 25.02
+    }
+   ],
+   "t0": 21.73,
+   "t1": 26.78
+  },
+  {
+   "id": "return",
+   "from": 77,
+   "type": "object",
+   "label": "TEMPORADA 6",
+   "title": "Volvió sin ninguna explicación",
+   "highlight": "explicación",
+   "visual": "la lápida; una etiqueta T6 aparece; el niño de parka salta desde detrás de la lápida rodeado de signos de interrogación",
+   "keys": [
+    {
+     "id": "season",
+     "at": 83,
+     "sfx": "pop",
+     "t": 28.26
+    },
+    {
+     "id": "back",
+     "at": 85,
+     "sfx": [
+      "boing",
+      "sparkle@0.2"
+     ],
+     "t": 29.14
+    }
+   ],
+   "t0": 26.78,
+   "t1": 31.03
+  },
+  {
+   "id": "closing",
+   "from": 89,
+   "type": "closing",
+   "label": "O SEA",
+   "title": "El más difícil de matar",
+   "highlight": "matar",
+   "visual": "fondo cielo; el niño de parka con corazones de vidas infinitas girando alrededor; luego burbujas de comentarios",
+   "keys": [
+    {
+     "id": "lives",
+     "at": 95,
+     "sfx": "sparkle",
+     "t": 32.66
+    },
+    {
+     "id": "comments",
+     "at": 109,
+     "sfx": "pop",
+     "t": 36.6
+    }
+   ],
+   "t0": 31.03,
+   "t1": 37.84
+  }
+ ],
+ "duration": 37.84
+}

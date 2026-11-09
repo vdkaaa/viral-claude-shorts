@@ -1,0 +1,218 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Curiosidad: Isaac Hayes (voz de Chef, ganador de un Oscar) dejó South Park en 2006 tras el capítulo que se burlaba de la Cienciología (Trapped in the Closet, 2005); en The Return of Chef usaron frases viejas suyas y Chef muere. Arte 100 % original en flat2d: NO dibujar a Chef ni a ningún personaje de South Park, ni símbolos de la Cienciología, ni la estatuilla del Oscar tal cual (trofeo dorado genérico con el texto OSCAR). Objetos: gorro de cocinero, olla humeante, micrófono, ondas de sonido, tele, carnet con sello, carta de renuncia, micrófono vacío con X, espiral hipnótica, lápida, cintas de audio y tijeras, burbujas de comentarios. Fondos cálidos de cocina y azul noche. Efectos de sonido en cada objeto.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "SOUTH PARK",
+   "title": "¿Te acuerdas de Chef?",
+   "highlight": "Chef",
+   "visual": "una barra de comedor escolar; un gorro de cocinero y una olla humeante aparecen; en 'real' el gorro se vuelve un contorno punteado con un signo de pregunta",
+   "keys": [
+    {
+     "id": "hat",
+     "at": 3,
+     "sfx": "pop",
+     "t": 0.72
+    },
+    {
+     "id": "real",
+     "at": 11,
+     "sfx": "punch",
+     "t": 3.66
+    }
+   ],
+   "t0": 0,
+   "t1": 4.65
+  },
+  {
+   "id": "voice",
+   "from": 13,
+   "type": "object",
+   "label": "LA VOZ",
+   "title": "Su voz era Isaac Hayes",
+   "highlight": "voz",
+   "visual": "un micrófono aparece con ondas de sonido; un trofeo dorado genérico con placa OSCAR entra desde la derecha",
+   "keys": [
+    {
+     "id": "mic",
+     "at": 19,
+     "sfx": "pop",
+     "t": 6.44
+    },
+    {
+     "id": "oscar",
+     "at": 27,
+     "sfx": [
+      "whoosh",
+      "sparkle@0.2"
+     ],
+     "t": 8.88
+    }
+   ],
+   "t0": 4.65,
+   "t1": 9.59
+  },
+  {
+   "id": "episode",
+   "from": 28,
+   "type": "object",
+   "label": "SOUTH PARK · 2005",
+   "title": "Se burlaron de la cienciología",
+   "highlight": "cienciología",
+   "visual": "una tele se enciende con estática; aparece la palabra CIENCIOLOGÍA y luego carcajadas JA JA saltan alrededor",
+   "keys": [
+    {
+     "id": "tv",
+     "at": 31,
+     "sfx": "tv",
+     "t": 11
+    },
+    {
+     "id": "laugh",
+     "at": 39,
+     "sfx": "boing",
+     "t": 13.18
+    }
+   ],
+   "t0": 9.59,
+   "t1": 13.93
+  },
+  {
+   "id": "member",
+   "from": 40,
+   "type": "object",
+   "label": "EL PROBLEMA",
+   "title": "Y Hayes era cienciólogo",
+   "highlight": "cienciólogo",
+   "visual": "un carnet de miembro con una silueta y un micrófono entra; un sello rojo MIEMBRO cae encima",
+   "keys": [
+    {
+     "id": "card",
+     "at": 41,
+     "sfx": "whoosh",
+     "t": 14.42
+    },
+    {
+     "id": "stamp",
+     "at": 44,
+     "sfx": "punch",
+     "t": 15.36
+    }
+   ],
+   "t0": 13.93,
+   "t1": 16.39
+  },
+  {
+   "id": "quit",
+   "from": 45,
+   "type": "comparison",
+   "label": "2006",
+   "title": "Dejó la serie",
+   "highlight": "serie",
+   "visual": "una carta ME VOY entra volando; luego un pie de micrófono vacío y una X roja grande: no lo reemplazaron",
+   "keys": [
+    {
+     "id": "letter",
+     "at": 50,
+     "sfx": "whoosh",
+     "t": 18.12
+    },
+    {
+     "id": "empty",
+     "at": 58,
+     "sfx": "punch",
+     "t": 20.74
+    }
+   ],
+   "t0": 16.39,
+   "t1": 22.01
+  },
+  {
+   "id": "brainwash",
+   "from": 61,
+   "type": "process",
+   "label": "EL CAPÍTULO",
+   "title": "Le lavan el cerebro… y muere",
+   "highlight": "cerebro",
+   "visual": "el gorro de cocinero con una espiral hipnótica girando detrás; en 'muere' cae una lápida RIP con el gorro encima",
+   "keys": [
+    {
+     "id": "spiral",
+     "at": 70,
+     "sfx": "boing",
+     "t": 24.48
+    },
+    {
+     "id": "dies",
+     "at": 74,
+     "sfx": "punch",
+     "t": 25.76
+    }
+   ],
+   "t0": 22.01,
+   "t1": 26.75
+  },
+  {
+   "id": "clips",
+   "from": 76,
+   "type": "process",
+   "label": "EL TRUCO",
+   "title": "Con frases viejas de su voz",
+   "highlight": "frases",
+   "visual": "tiras de cinta con burbujas de diálogo entran desde los lados; unas tijeras las recortan en 'recortadas'",
+   "keys": [
+    {
+     "id": "tapes",
+     "at": 79,
+     "sfx": "tape",
+     "t": 27.9
+    },
+    {
+     "id": "cut",
+     "at": 84,
+     "sfx": "snip",
+     "t": 29.44
+    }
+   ],
+   "t0": 26.75,
+   "t1": 31.43
+  },
+  {
+   "id": "closing",
+   "from": 88,
+   "type": "closing",
+   "label": "O SEA",
+   "title": "Lo despidieron con sus palabras",
+   "highlight": "palabras",
+   "visual": "fondo cielo; burbujas de diálogo se juntan alrededor del gorro de cocinero que sube con un halo; luego burbujas de comentarios",
+   "keys": [
+    {
+     "id": "words",
+     "at": 94,
+     "sfx": "whoosh",
+     "t": 33.14
+    },
+    {
+     "id": "miss",
+     "at": 99,
+     "sfx": "ding",
+     "t": 35.5
+    },
+    {
+     "id": "comments",
+     "at": 102,
+     "sfx": "pop",
+     "t": 36.84
+    }
+   ],
+   "t0": 31.43,
+   "t1": 38.269
+  }
+ ],
+ "duration": 38.269
+}

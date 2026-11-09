@@ -1,0 +1,218 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Curiosidad: tras el capítulo Band in China (T23E2, 2019) China eliminó South Park de su internet; los creadores respondieron con una disculpa satírica que terminaba deseando una buena cosecha de sorgo. Arte 100 % original en flat2d: NO dibujar a Randy ni a ningún personaje de South Park, NI a Winnie the Pooh (solo un tarro de miel genérico con abejas y orejitas de oso como silueta simple), ni a ningún político real. Objetos: mapa/silueta de China genérica, tele, avión, valla de campo, tarro de miel, barra de censura, celular con buscador, carta de disculpa, bolsa de dinero vs paloma de la libertad en una balanza, tallos de sorgo, burbujas de comentarios. Fondos rojo oscuro y azul noche, con toques dorados. Efectos de sonido en cada objeto.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "SOUTH PARK × CHINA",
+   "title": "China borró South Park de internet",
+   "highlight": "internet",
+   "visual": "una ventana de navegador con el logo-texto SOUTH PARK; una goma de borrar gigante pasa y lo borra dejando un cuadro vacío",
+   "keys": [
+    {
+     "id": "browser",
+     "at": 2,
+     "sfx": "pop",
+     "t": 0.68
+    },
+    {
+     "id": "erase",
+     "at": 7,
+     "sfx": "whoosh",
+     "t": 2
+    },
+    {
+     "id": "one",
+     "at": 11,
+     "sfx": "punch",
+     "t": 3.5
+    }
+   ],
+   "t0": 0,
+   "t1": 4.53
+  },
+  {
+   "id": "episode",
+   "from": 12,
+   "type": "object",
+   "label": "SOUTH PARK · 2019",
+   "title": "Episodio: Band in China",
+   "highlight": "China",
+   "visual": "una tele se enciende con estática y muestra el texto BAND IN CHINA con una etiqueta T23 · E2",
+   "keys": [
+    {
+     "id": "tv",
+     "at": 14,
+     "sfx": "tv",
+     "t": 5.46
+    }
+   ],
+   "t0": 4.53,
+   "t1": 7.27
+  },
+  {
+   "id": "trip",
+   "from": 18,
+   "type": "process",
+   "label": "LA HISTORIA",
+   "title": "Termina en un campo de trabajo",
+   "highlight": "trabajo",
+   "visual": "un avión cruza hacia una silueta de mapa roja; aparece una valla de alambre; detrás de la valla asoma un tarro de miel con abejas",
+   "keys": [
+    {
+     "id": "plane",
+     "at": 24,
+     "sfx": "whoosh",
+     "t": 8.96
+    },
+    {
+     "id": "camp",
+     "at": 32,
+     "sfx": "punch",
+     "t": 10.9
+    },
+    {
+     "id": "honey",
+     "at": 35,
+     "sfx": "pop",
+     "t": 11.92
+    }
+   ],
+   "t0": 7.27,
+   "t1": 12.97
+  },
+  {
+   "id": "censor",
+   "from": 40,
+   "type": "comparison",
+   "label": "NO ES CASUALIDAD",
+   "title": "Censuraban a Winnie the Pooh",
+   "highlight": "Pooh",
+   "visual": "el tarro de miel recibe una barra negra CENSURADO; al lado, una silueta genérica de traje y corbata con un signo = entre los dos",
+   "keys": [
+    {
+     "id": "bar",
+     "at": 46,
+     "sfx": "punch",
+     "t": 14.84
+    },
+    {
+     "id": "compare",
+     "at": 53,
+     "sfx": "boing",
+     "t": 16.54
+    }
+   ],
+   "t0": 12.97,
+   "t1": 18.21
+  },
+  {
+   "id": "erased",
+   "from": 57,
+   "type": "object",
+   "label": "DÍAS DESPUÉS",
+   "title": "Buscabas South Park… y nada",
+   "highlight": "nada",
+   "visual": "un celular con un buscador; se escribe SOUTH PARK letra a letra; aparece 0 RESULTADOS y una lupa triste",
+   "keys": [
+    {
+     "id": "type",
+     "at": 64,
+     "sfx": "click",
+     "t": 20.16
+    },
+    {
+     "id": "zero",
+     "at": 72,
+     "sfx": "punch",
+     "t": 22.02
+    }
+   ],
+   "t0": 18.21,
+   "t1": 22.93
+  },
+  {
+   "id": "apology",
+   "from": 74,
+   "type": "comparison",
+   "label": "LA RESPUESTA",
+   "title": "Una disculpa falsa",
+   "highlight": "disculpa",
+   "visual": "una carta LO SENTIMOS entra; luego una balanza: la bolsa de dinero pesa más que la palabra LIBERTAD",
+   "keys": [
+    {
+     "id": "letter",
+     "at": 80,
+     "sfx": "whoosh",
+     "t": 24.96
+    },
+    {
+     "id": "scale",
+     "at": 86,
+     "sfx": "ding",
+     "t": 27.34
+    }
+   ],
+   "t0": 22.93,
+   "t1": 28.64
+  },
+  {
+   "id": "sorghum",
+   "from": 91,
+   "type": "object",
+   "label": "Y EL REMATE",
+   "title": "Una buena cosecha de sorgo",
+   "highlight": "cosecha",
+   "visual": "tallos de sorgo crecen desde el suelo con granos rojizos y brillos; un sol dorado detrás",
+   "keys": [
+    {
+     "id": "grow",
+     "at": 96,
+     "sfx": [
+      "pop",
+      "sparkle@0.2"
+     ],
+     "t": 30.68
+    }
+   ],
+   "t0": 28.64,
+   "t1": 32.28
+  },
+  {
+   "id": "closing",
+   "from": 99,
+   "type": "closing",
+   "label": "O SEA",
+   "title": "Los vetaron… y se burlaron otra vez",
+   "highlight": "burlaron",
+   "visual": "fondo cielo; un sello VETADO cae y rebota; carcajadas JA JA saltan; luego burbujas de comentarios",
+   "keys": [
+    {
+     "id": "banned",
+     "at": 102,
+     "sfx": "punch",
+     "t": 32.86
+    },
+    {
+     "id": "laugh",
+     "at": 106,
+     "sfx": "boing",
+     "t": 33.84
+    },
+    {
+     "id": "comments",
+     "at": 113,
+     "sfx": "pop",
+     "t": 36.38
+    }
+   ],
+   "t0": 32.28,
+   "t1": 37.564
+  }
+ ],
+ "duration": 37.564
+}

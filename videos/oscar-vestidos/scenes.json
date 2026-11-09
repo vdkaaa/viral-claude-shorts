@@ -1,0 +1,202 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Curiosidad: en los Oscar del 2000 Trey Parker y Matt Stone (nominados por Blame Canada) fueron con réplicas de los vestidos de Gwyneth Paltrow y Jennifer López, y luego contaron que iban con LSD; ganó Phil Collins por Tarzán. Arte 100 % original en flat2d: NO dibujar personas reales con rasgos (siluetas sin cara), ni personajes de South Park, ni la estatuilla del Oscar tal cual (trofeo dorado genérico). Objetos: alfombra roja, focos, vestidos rosa y verde, notas musicales, hoja de arce, sobre de nominación, flashes de cámara, espirales de colores (sin mostrar drogas), estrellas de mareo, liana y hojas de selva, confeti. Fondos azul noche y morado con dorado. Efectos de sonido en cada objeto.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "SOUTH PARK · OSCAR 2000",
+   "title": "Fueron a los Oscar… con vestido",
+   "highlight": "vestido",
+   "visual": "una alfombra roja se desenrolla con un trofeo dorado al fondo; un vestido rosa cae girando al centro",
+   "keys": [
+    {
+     "id": "carpet",
+     "at": 8,
+     "sfx": "whoosh",
+     "t": 2.12
+    },
+    {
+     "id": "dress",
+     "at": 10,
+     "sfx": [
+      "pop",
+      "sparkle@0.15"
+     ],
+     "t": 3.34
+    }
+   ],
+   "t0": 0,
+   "t1": 4.31
+  },
+  {
+   "id": "song",
+   "from": 11,
+   "type": "object",
+   "label": "LA NOMINACIÓN",
+   "title": "Nominados por «Blame Canada»",
+   "highlight": "Canada",
+   "visual": "notas musicales salen de un disco; aparece una hoja de arce roja; un sobre dorado NOMINADA se abre",
+   "keys": [
+    {
+     "id": "notes",
+     "at": 17,
+     "sfx": "pop",
+     "t": 6.06
+    },
+    {
+     "id": "leaf",
+     "at": 19,
+     "sfx": "pop",
+     "t": 6.72
+    },
+    {
+     "id": "nominee",
+     "at": 27,
+     "sfx": [
+      "ding",
+      "sparkle@0.1"
+     ],
+     "t": 8.88
+    }
+   ],
+   "t0": 4.31,
+   "t1": 10.91
+  },
+  {
+   "id": "dresses",
+   "from": 31,
+   "type": "comparison",
+   "label": "LA ALFOMBRA ROJA",
+   "title": "Con copias de vestidos famosos",
+   "highlight": "vestidos",
+   "visual": "dos siluetas sin cara en la alfombra roja; caen sobre ellas un vestido rosa y uno verde; flashes de cámara",
+   "keys": [
+    {
+     "id": "duo",
+     "at": 33,
+     "sfx": "whoosh",
+     "t": 11.52
+    },
+    {
+     "id": "dresses",
+     "at": 46,
+     "sfx": [
+      "pop",
+      "pop@0.15"
+     ],
+     "t": 15.24
+    },
+    {
+     "id": "flash",
+     "at": 49,
+     "sfx": "click",
+     "t": 16.26
+    }
+   ],
+   "t0": 10.91,
+   "t1": 17.87
+  },
+  {
+   "id": "secret",
+   "from": 53,
+   "type": "object",
+   "label": "AÑOS DESPUÉS",
+   "title": "Esa noche iban drogados",
+   "highlight": "drogados",
+   "visual": "un sello SECRETO cae; luego espirales de colores giran detrás de la silueta",
+   "keys": [
+    {
+     "id": "secret",
+     "at": 56,
+     "sfx": "punch",
+     "t": 19.06
+    },
+    {
+     "id": "trip",
+     "at": 62,
+     "sfx": "boing",
+     "t": 21.72
+    }
+   ],
+   "t0": 17.87,
+   "t1": 23.13
+  },
+  {
+   "id": "dizzy",
+   "from": 65,
+   "type": "object",
+   "label": "IMAGÍNATE",
+   "title": "Y no saber ni dónde estás",
+   "highlight": "dónde",
+   "visual": "la silueta con vestido se tambalea; estrellas giran sobre su cabeza; signos de interrogación",
+   "keys": [
+    {
+     "id": "dizzy",
+     "at": 71,
+     "sfx": "boing",
+     "t": 25.44
+    }
+   ],
+   "t0": 23.13,
+   "t1": 27.17
+  },
+  {
+   "id": "winner",
+   "from": 76,
+   "type": "comparison",
+   "label": "Y NO GANARON",
+   "title": "Ganó Phil Collins, por Tarzán",
+   "highlight": "Collins",
+   "visual": "el trofeo con una X roja; luego el trofeo vuela hacia la derecha a una liana con hojas de selva y una nota musical",
+   "keys": [
+    {
+     "id": "lose",
+     "at": 78,
+     "sfx": "punch",
+     "t": 27.7
+    },
+    {
+     "id": "win",
+     "at": 85,
+     "sfx": [
+      "whoosh",
+      "ding@0.3"
+     ],
+     "t": 29.74
+    }
+   ],
+   "t0": 27.17,
+   "t1": 32.01
+  },
+  {
+   "id": "closing",
+   "from": 91,
+   "type": "closing",
+   "label": "PERO",
+   "title": "Perdieron… pero ganaron la noche",
+   "highlight": "noche",
+   "visual": "fondo noche; confeti cae sobre los dos vestidos; luego burbujas de comentarios",
+   "keys": [
+    {
+     "id": "party",
+     "at": 92,
+     "sfx": "sparkle",
+     "t": 32.44
+    },
+    {
+     "id": "comments",
+     "at": 103,
+     "sfx": "pop",
+     "t": 36.02
+    }
+   ],
+   "t0": 32.01,
+   "t1": 37.2
+  }
+ ],
+ "duration": 37.2
+}

@@ -1,0 +1,218 @@
+{
+ "duration": 41.12,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 2.26,
+   "from": 0,
+   "to": 8,
+   "text": "La película de South Park tiene un récord guines,",
+   "question": false
+  },
+  {
+   "n": 2,
+   "t0": 2.84,
+   "t1": 4.04,
+   "from": 9,
+   "to": 11,
+   "text": "por decir groserías.",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 4.66,
+   "t1": 9.78,
+   "from": 12,
+   "to": 22,
+   "text": "Verás, en 1999 estrenaron más grande, más largo y sin cortes.",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 10.16,
+   "t1": 11.58,
+   "from": 23,
+   "to": 29,
+   "text": "Y la historia es justo sobre eso.",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 11.92,
+   "t1": 15.82,
+   "from": 30,
+   "to": 41,
+   "text": "Los niños ven una película llena de insultos y empiezan a repetirlos.",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 16.3,
+   "t1": 19.82,
+   "from": 42,
+   "to": 50,
+   "text": "Así que la película en sí tiene 399 groserías,",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 20.16,
+   "t1": 21.56,
+   "from": 51,
+   "to": 54,
+   "text": "casi 5 por minuto.",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 21.9,
+   "t1": 25.38,
+   "from": 55,
+   "to": 67,
+   "text": "Por eso entró al libro guines como la película animada con más palabrotas.",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 25.38,
+   "t1": 26.88,
+   "from": 68,
+   "to": 71,
+   "text": "Pero lo más irónico,",
+   "question": false
+  },
+  {
+   "n": 10,
+   "t0": 27.3,
+   "t1": 31.54,
+   "from": 72,
+   "to": 85,
+   "text": "la censura casi no la deja salir y aún así terminó nominada al Oscar.",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 32.14,
+   "t1": 36.58,
+   "from": 86,
+   "to": 99,
+   "text": "O sea, una película que critica la censura rompiendo todos los récords de groserías.",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 37.38,
+   "t1": 38.56,
+   "from": 100,
+   "to": 106,
+   "text": "¿Cuál es la que más dices tú?",
+   "question": true
+  },
+  {
+   "n": 13,
+   "t0": 39.2,
+   "t1": 40.68,
+   "from": 107,
+   "to": 113,
+   "text": "Mejor no la escribas en los comentarios.",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 2.26,
+   "t1": 2.84,
+   "dur": 0.58,
+   "after": 8
+  },
+  {
+   "t0": 4.04,
+   "t1": 4.66,
+   "dur": 0.62,
+   "after": 11
+  },
+  {
+   "t0": 9.78,
+   "t1": 10.16,
+   "dur": 0.38,
+   "after": 22
+  },
+  {
+   "t0": 11.58,
+   "t1": 11.92,
+   "dur": 0.34,
+   "after": 29
+  },
+  {
+   "t0": 15.82,
+   "t1": 16.3,
+   "dur": 0.48,
+   "after": 41
+  },
+  {
+   "t0": 19.82,
+   "t1": 20.16,
+   "dur": 0.34,
+   "after": 50
+  },
+  {
+   "t0": 21.56,
+   "t1": 21.9,
+   "dur": 0.34,
+   "after": 54
+  },
+  {
+   "t0": 26.88,
+   "t1": 27.3,
+   "dur": 0.42,
+   "after": 71
+  },
+  {
+   "t0": 31.54,
+   "t1": 32.14,
+   "dur": 0.6,
+   "after": 85
+  },
+  {
+   "t0": 36.58,
+   "t1": 37.38,
+   "dur": 0.8,
+   "after": 99
+  },
+  {
+   "t0": 38.56,
+   "t1": 39.2,
+   "dur": 0.64,
+   "after": 106
+  }
+ ],
+ "numbers": [
+  {
+   "i": 14,
+   "w": "1999",
+   "t0": 5.34
+  },
+  {
+   "i": 33,
+   "w": "una",
+   "t0": 12.5
+  },
+  {
+   "i": 49,
+   "w": "399",
+   "t0": 17.82
+  },
+  {
+   "i": 52,
+   "w": "5",
+   "t0": 20.4
+  },
+  {
+   "i": 88,
+   "w": "una",
+   "t0": 32.56
+  }
+ ],
+ "words": 114
+}

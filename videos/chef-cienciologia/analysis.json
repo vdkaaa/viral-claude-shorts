@@ -1,0 +1,239 @@
+{
+ "duration": 38.269,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 2.2,
+   "from": 0,
+   "to": 8,
+   "text": "¿Te acuerdas de Chef, el cocinero de la escuela?",
+   "question": true
+  },
+  {
+   "n": 2,
+   "t0": 2.88,
+   "t1": 4.38,
+   "from": 9,
+   "to": 12,
+   "text": "Su desaparición fue real.",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 4.9,
+   "t1": 9.26,
+   "from": 13,
+   "to": 27,
+   "text": "Verás, a Chef le ponía la voz Isaac Hayes, un cantante que era un Óscar.",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 9.84,
+   "t1": 10.62,
+   "from": 28,
+   "to": 30,
+   "text": "Pero en 2005,",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 11,
+   "t1": 13.74,
+   "from": 31,
+   "to": 39,
+   "text": "South Park hizo un capítulo burlándose de la cienciología,",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 14.18,
+   "t1": 16.08,
+   "from": 40,
+   "to": 44,
+   "text": "y Isaac Hayes era cienciólogo.",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 16.64,
+   "t1": 19.6,
+   "from": 45,
+   "to": 54,
+   "text": "Así que unos meses después anunció que dejaba la serie,",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 20.14,
+   "t1": 21.8,
+   "from": 55,
+   "to": 60,
+   "text": "y los creadores no lo reemplazaron.",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 22.26,
+   "t1": 25.14,
+   "from": 61,
+   "to": 72,
+   "text": "Hicieron un capítulo donde una secta le lava el cerebro a Chef,",
+   "question": false
+  },
+  {
+   "n": 10,
+   "t0": 25.64,
+   "t1": 26.42,
+   "from": 73,
+   "to": 75,
+   "text": "y Chef muere.",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 27,
+   "t1": 30.98,
+   "from": 76,
+   "to": 87,
+   "text": "Para hacerlo usaron frases viejas de su voz, recortadas de otros episodios.",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 31.68,
+   "t1": 32.48,
+   "from": 88,
+   "to": 91,
+   "text": "O sea, se fue,",
+   "question": false
+  },
+  {
+   "n": 13,
+   "t0": 32.84,
+   "t1": 34.78,
+   "from": 92,
+   "to": 98,
+   "text": "pero lo despidieron con sus propias palabras.",
+   "question": false
+  },
+  {
+   "n": 14,
+   "t0": 35.5,
+   "t1": 36.32,
+   "from": 99,
+   "to": 101,
+   "text": "¿Extrañas a Chef?",
+   "question": true
+  },
+  {
+   "n": 15,
+   "t0": 36.84,
+   "t1": 37.84,
+   "from": 102,
+   "to": 105,
+   "text": "Cuéntamelo en los comentarios.",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 2.2,
+   "t1": 2.88,
+   "dur": 0.68,
+   "after": 8
+  },
+  {
+   "t0": 4.38,
+   "t1": 4.9,
+   "dur": 0.52,
+   "after": 12
+  },
+  {
+   "t0": 9.26,
+   "t1": 9.84,
+   "dur": 0.58,
+   "after": 27
+  },
+  {
+   "t0": 10.62,
+   "t1": 11,
+   "dur": 0.38,
+   "after": 30
+  },
+  {
+   "t0": 13.74,
+   "t1": 14.18,
+   "dur": 0.44,
+   "after": 39
+  },
+  {
+   "t0": 16.08,
+   "t1": 16.64,
+   "dur": 0.56,
+   "after": 44
+  },
+  {
+   "t0": 19.6,
+   "t1": 20.14,
+   "dur": 0.54,
+   "after": 54
+  },
+  {
+   "t0": 21.8,
+   "t1": 22.26,
+   "dur": 0.46,
+   "after": 60
+  },
+  {
+   "t0": 25.14,
+   "t1": 25.64,
+   "dur": 0.5,
+   "after": 72
+  },
+  {
+   "t0": 26.42,
+   "t1": 27,
+   "dur": 0.58,
+   "after": 75
+  },
+  {
+   "t0": 30.98,
+   "t1": 31.68,
+   "dur": 0.7,
+   "after": 87
+  },
+  {
+   "t0": 32.48,
+   "t1": 32.84,
+   "dur": 0.36,
+   "after": 91
+  },
+  {
+   "t0": 34.78,
+   "t1": 35.5,
+   "dur": 0.72,
+   "after": 98
+  },
+  {
+   "t0": 36.32,
+   "t1": 36.84,
+   "dur": 0.52,
+   "after": 101
+  }
+ ],
+ "numbers": [
+  {
+   "i": 30,
+   "w": "2005,",
+   "t0": 10.14
+  },
+  {
+   "i": 65,
+   "w": "una",
+   "t0": 23.38
+  }
+ ],
+ "words": 106
+}

@@ -7,7 +7,7 @@ export interface Words { duration: number; language?: string; text?: string; wor
 
 // scenes.json (written by the agent, stamped with t0/t1/t by scenes.ts)
 export type SceneType = 'question' | 'object' | 'process' | 'comparison' | 'stat' | 'map' | 'asset' | 'closing';
-export interface Key { id: string; at?: number; t: number }   // at: word index (t in seconds when there's no voice)
+export interface Key { id: string; at?: number; t: number; sfx?: string | string[] }   // at: word index (t in seconds when there's no voice); sfx: sound effect(s) at this moment ("pop", "whoosh@-0.2"…, see music.ts)
 export interface Scene {
   id: string;
   from?: number;   // word index where the scene starts (no voice: t0 in seconds instead)

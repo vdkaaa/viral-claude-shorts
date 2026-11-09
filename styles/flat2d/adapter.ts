@@ -35,8 +35,11 @@ const adapter: Adapter = {
     const vis = path.join(v, 'visuals.ts');
     fs.writeFileSync(path.join(PROJ, 'visuals.js'), fs.existsSync(vis) ? toJs(vis) : '');
     if (fs.existsSync(path.join(v, 'assets'))) fs.cpSync(path.join(v, 'assets'), path.join(PROJ, 'assets'), { recursive: true });
-    const voice = ['mix.wav', 'audio.wav'].find((f) => fs.existsSync(path.join(v, f)));
-    if (voice) fs.copyFileSync(path.join(v, voice), path.join(PROJ, 'voice.wav'));   // to hear it in the preview; the final render remixes it
+    // to hear it in the preview (mix.wav = voice + music + effects, made by preview.ts); the final render remixes it
+    const voice = ['mix.wav', 'audio.wav', 'audio.mp3', 'audio.m4a'].find((f) => fs.existsSync(path.join(v, f)));
+    const vname = voice ? 'voice' + path.extname(voice) : '';
+    for (const x of ['wav', 'mp3', 'm4a']) fs.rmSync(path.join(PROJ, `voice.${x}`), { force: true });
+    if (voice) fs.copyFileSync(path.join(v, voice), path.join(PROJ, vname));
     const D = E.duration.toFixed(3);
     const sections = E.scenes.map((s, i) => `      <section id="sc-${esc(s.id)}" class="clip scene" data-start="${s.t0}" data-duration="${(s.t1 - s.t0).toFixed(3)}" data-track-index="0" style="z-index:${i + 1}">
         <div class="art"></div><div class="titles"></div>
@@ -53,7 +56,7 @@ const adapter: Adapter = {
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="${D}" data-width="1080" data-height="1920">
 ${sections}
-${voice ? `      <audio id="voice" src="voice.wav" data-start="0" data-duration="${D}" data-track-index="9"></audio>` : ''}
+${voice ? `      <audio id="voice" src="${vname}" data-start="0" data-duration="${D}" data-track-index="9"></audio>` : ''}
     </div>
     <script>
       const SCENES = ${JSON.stringify(E)};
