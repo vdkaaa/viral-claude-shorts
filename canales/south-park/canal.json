@@ -1,0 +1,28 @@
+{
+  "nombre": "South Park Forever",
+  "nicho": "Datos curiosos de South Park: detrás de cámaras, polémicas y récords",
+  "idioma": "es",
+  "estilo": "flat2d",
+  "voz": {
+    "id": null,
+    "modelo": "eleven_v3",
+    "acento": "latino neutro",
+    "tono": "amigo que cuenta un chisme, con energía"
+  },
+  "metricool": {
+    "blogId": "5440509",
+    "timezone": "America/Santiago"
+  },
+  "redes": {
+    "instagram": "southparkforever_99",
+    "youtube": "UCXidQAYsAOL2IB2w8uvpfGw",
+    "tiktok": null
+  },
+  "horarios": {
+    "instagram": "10:00",
+    "youtube": "16:00"
+  },
+  "videosPorSemana": 6,
+  "hashtagsBase": ["#southpark", "#curiosidades", "#datoscuriosos", "#series"],
+  "guionModelo": "videos/emmy-warcraft/guion.md"
+}

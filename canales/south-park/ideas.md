@@ -1,6 +1,6 @@
 # Banco de ideas: South Park
 
-Fórmula que usamos (ver `videos/emmy-warcraft/guion.md`): gancho de una línea con el dato más raro → "Verás" (contexto) → "Pero" (giro) → "Así que / Por eso" (consecuencia) → "O sea" (remate) + pregunta para comentarios. ~40 s, Eleven v3, latino neutro.
+Cómo se escribe cada guion: `formula.md` (en esta misma carpeta).
 
 Estados: `idea` → `guion` → `audio` → `video` → `publicado` (con fecha y enlace).
 
@@ -20,9 +20,3 @@ Estados: `idea` → `guion` → `audio` → `video` → `publicado` (con fecha y
 | 12 | imaginationland | Otro Emmy, esta vez por un "capítulo película" (2008) | idea |
 | 13 | juego-censurado | El videojuego que Europa censuró con pantallas de texto | idea |
 | 14 | episodio-201 | El capítulo que nunca más se pudo ver | idea (tema delicado) |
-
-## Reglas
-
-- Solo datos comprobables: cada guion lleva su sección "Datos comprobables".
-- No usar imágenes, clips ni audio reales de South Park: todo animado con flat2d (evita reclamos de copyright).
-- Lo que diga `ideas/resultados.md` manda: si un tipo de gancho funciona mejor, se hacen más de ese tipo.

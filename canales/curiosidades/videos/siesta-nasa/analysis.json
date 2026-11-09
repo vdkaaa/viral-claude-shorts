@@ -1,0 +1,299 @@
+{
+ "duration": 52,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 3.98,
+   "from": 0,
+   "to": 9,
+   "text": "La NASA estudió la siesta perfecta con pilotos de avión.",
+   "question": false
+  },
+  {
+   "n": 2,
+   "t0": 4.8,
+   "t1": 14.18,
+   "from": 10,
+   "to": 30,
+   "text": "Verás, en 1995 dejaron que pilotos de vuelos largos descansaran 40 minutos en su asiento, mientras el compañero manejaba el avión.",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 15.28,
+   "t1": 20.1,
+   "from": 31,
+   "to": 42,
+   "text": "Se quedaron dormidos en menos de 6 minutos y durmieron unos 26.",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 21.28,
+   "t1": 24.56,
+   "from": 43,
+   "to": 50,
+   "text": "Y después estaban más alertas y rendían mejor,",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 25.18,
+   "t1": 26.78,
+   "from": 51,
+   "to": 56,
+   "text": "justo en la parte más difícil,",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 27.78,
+   "t1": 28.48,
+   "from": 57,
+   "to": 58,
+   "text": "el aterrizaje.",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 29.2,
+   "t1": 30.06,
+   "from": 59,
+   "to": 60,
+   "text": "Pero ojo,",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 30.86,
+   "t1": 32.28,
+   "from": 61,
+   "to": 67,
+   "text": "no era una siesta de dos horas,",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 32.96,
+   "t1": 35.56,
+   "from": 68,
+   "to": 73,
+   "text": "era corta para no despertar atontado.",
+   "question": false
+  },
+  {
+   "n": 10,
+   "t0": 36.6,
+   "t1": 37.06,
+   "from": 74,
+   "to": 75,
+   "text": "Por eso,",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 37.34,
+   "t1": 38.74,
+   "from": 76,
+   "to": 82,
+   "text": "si te das sueño a media tarde,",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 39.46,
+   "t1": 43.32,
+   "from": 83,
+   "to": 94,
+   "text": "prueba una siesta corta de unos 20 minutos y pon un alarma.",
+   "question": false
+  },
+  {
+   "n": 13,
+   "t0": 44.14,
+   "t1": 44.42,
+   "from": 95,
+   "to": 96,
+   "text": "O sea,",
+   "question": false
+  },
+  {
+   "n": 14,
+   "t0": 45.1,
+   "t1": 46.24,
+   "from": 97,
+   "to": 101,
+   "text": "si la NASA la prueba,",
+   "question": false
+  },
+  {
+   "n": 15,
+   "t0": 46.84,
+   "t1": 48,
+   "from": 102,
+   "to": 104,
+   "text": "ya tienes excusa.",
+   "question": false
+  },
+  {
+   "n": 16,
+   "t0": 49.18,
+   "t1": 50.1,
+   "from": 105,
+   "to": 109,
+   "text": "¿Eres de siesta o no?",
+   "question": true
+  },
+  {
+   "n": 17,
+   "t0": 50.86,
+   "t1": 51.6,
+   "from": 110,
+   "to": 113,
+   "text": "Dímelo en los comentarios.",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 3.98,
+   "t1": 4.8,
+   "dur": 0.82,
+   "after": 9
+  },
+  {
+   "t0": 14.18,
+   "t1": 15.28,
+   "dur": 1.1,
+   "after": 30
+  },
+  {
+   "t0": 20.1,
+   "t1": 21.28,
+   "dur": 1.18,
+   "after": 42
+  },
+  {
+   "t0": 24.56,
+   "t1": 25.18,
+   "dur": 0.62,
+   "after": 50
+  },
+  {
+   "t0": 26.78,
+   "t1": 27.78,
+   "dur": 1,
+   "after": 56
+  },
+  {
+   "t0": 28.48,
+   "t1": 29.2,
+   "dur": 0.72,
+   "after": 58
+  },
+  {
+   "t0": 30.06,
+   "t1": 30.86,
+   "dur": 0.8,
+   "after": 60
+  },
+  {
+   "t0": 32.28,
+   "t1": 32.96,
+   "dur": 0.68,
+   "after": 67
+  },
+  {
+   "t0": 35.56,
+   "t1": 36.6,
+   "dur": 1.04,
+   "after": 73
+  },
+  {
+   "t0": 37.06,
+   "t1": 37.34,
+   "dur": 0.28,
+   "after": 75
+  },
+  {
+   "t0": 38.74,
+   "t1": 39.46,
+   "dur": 0.72,
+   "after": 82
+  },
+  {
+   "t0": 43.32,
+   "t1": 44.14,
+   "dur": 0.82,
+   "after": 94
+  },
+  {
+   "t0": 44.42,
+   "t1": 45.1,
+   "dur": 0.68,
+   "after": 96
+  },
+  {
+   "t0": 46.24,
+   "t1": 46.84,
+   "dur": 0.6,
+   "after": 101
+  },
+  {
+   "t0": 48,
+   "t1": 49.18,
+   "dur": 1.18,
+   "after": 104
+  },
+  {
+   "t0": 50.1,
+   "t1": 50.86,
+   "dur": 0.76,
+   "after": 109
+  }
+ ],
+ "numbers": [
+  {
+   "i": 12,
+   "w": "1995",
+   "t0": 5.72
+  },
+  {
+   "i": 20,
+   "w": "40",
+   "t0": 10.18
+  },
+  {
+   "i": 37,
+   "w": "6",
+   "t0": 17.22
+  },
+  {
+   "i": 42,
+   "w": "26.",
+   "t0": 19.46
+  },
+  {
+   "i": 63,
+   "w": "una",
+   "t0": 31.16
+  },
+  {
+   "i": 66,
+   "w": "dos",
+   "t0": 31.86
+  },
+  {
+   "i": 84,
+   "w": "una",
+   "t0": 39.74
+  },
+  {
+   "i": 89,
+   "w": "20",
+   "t0": 41.1
+  }
+ ],
+ "words": 114
+}

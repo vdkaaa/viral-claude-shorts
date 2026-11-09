@@ -1,0 +1,388 @@
+{
+ "duration": 54,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 2.58,
+   "from": 0,
+   "to": 9,
+   "text": "¿Te dijeron que un hábito se forma en 21 días?",
+   "question": true
+  },
+  {
+   "n": 2,
+   "t0": 3.7,
+   "t1": 4.46,
+   "from": 10,
+   "to": 11,
+   "text": "Es mentira.",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 5.66,
+   "t1": 7.8,
+   "from": 12,
+   "to": 17,
+   "text": "Verás, en una universidad del Londres,",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 8.26,
+   "t1": 11.14,
+   "from": 18,
+   "to": 26,
+   "text": "siguieron a 96 personas que querían un hábito nuevo.",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 11.86,
+   "t1": 12.46,
+   "from": 27,
+   "to": 28,
+   "text": "Tomar agua,",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 12.98,
+   "t1": 13.58,
+   "from": 29,
+   "to": 30,
+   "text": "comer fruta,",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 14.2,
+   "t1": 14.82,
+   "from": 31,
+   "to": 33,
+   "text": "salir a correr.",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 15.92,
+   "t1": 19.72,
+   "from": 34,
+   "to": 43,
+   "text": "Pero en promedio tardaron 66 días en hacerlo sin pensar.",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 20.4,
+   "t1": 21.02,
+   "from": 44,
+   "to": 45,
+   "text": "¿Y algunos?",
+   "question": true
+  },
+  {
+   "n": 10,
+   "t0": 23.16,
+   "t1": 23.84,
+   "from": 46,
+   "to": 46,
+   "text": "254.",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 24.98,
+   "t1": 25.66,
+   "from": 47,
+   "to": 48,
+   "text": "Lo mejor,",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 26.28,
+   "t1": 27.86,
+   "from": 49,
+   "to": 54,
+   "text": "saltarse un día no arruinaba nada.",
+   "question": false
+  },
+  {
+   "n": 13,
+   "t0": 27.86,
+   "t1": 30.46,
+   "from": 55,
+   "to": 62,
+   "text": "Lo que sí fallaba era hacerlo a ratos.",
+   "question": false
+  },
+  {
+   "n": 14,
+   "t0": 31.42,
+   "t1": 34.54,
+   "from": 63,
+   "to": 72,
+   "text": "Por eso, si llevas tres semanas y todavía te cuesta,",
+   "question": false
+  },
+  {
+   "n": 15,
+   "t0": 35.08,
+   "t1": 35.96,
+   "from": 73,
+   "to": 75,
+   "text": "no estás fallando,",
+   "question": false
+  },
+  {
+   "n": 16,
+   "t0": 36.62,
+   "t1": 37.58,
+   "from": 76,
+   "to": 79,
+   "text": "vas a la mitad.",
+   "question": false
+  },
+  {
+   "n": 17,
+   "t0": 38.7,
+   "t1": 39.98,
+   "from": 80,
+   "to": 83,
+   "text": "No te exijas perfección,",
+   "question": false
+  },
+  {
+   "n": 18,
+   "t0": 40.7,
+   "t1": 42.44,
+   "from": 84,
+   "to": 85,
+   "text": "exígete constancia.",
+   "question": false
+  },
+  {
+   "n": 19,
+   "t0": 43.68,
+   "t1": 44,
+   "from": 86,
+   "to": 87,
+   "text": "O sea,",
+   "question": false
+  },
+  {
+   "n": 20,
+   "t0": 44.5,
+   "t1": 45.46,
+   "from": 88,
+   "to": 91,
+   "text": "no son 21 días,",
+   "question": false
+  },
+  {
+   "n": 21,
+   "t0": 46.32,
+   "t1": 48.28,
+   "from": 92,
+   "to": 96,
+   "text": "son más de dos meses.",
+   "question": false
+  },
+  {
+   "n": 22,
+   "t0": 49.52,
+   "t1": 51.6,
+   "from": 97,
+   "to": 101,
+   "text": "¿Qué hábito estás construyendo tú?",
+   "question": true
+  },
+  {
+   "n": 23,
+   "t0": 52.64,
+   "t1": 53.58,
+   "from": 102,
+   "to": 105,
+   "text": "Cuéntamelo en los comentarios.",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 2.58,
+   "t1": 3.7,
+   "dur": 1.12,
+   "after": 9
+  },
+  {
+   "t0": 4.46,
+   "t1": 5.66,
+   "dur": 1.2,
+   "after": 11
+  },
+  {
+   "t0": 7.8,
+   "t1": 8.26,
+   "dur": 0.46,
+   "after": 17
+  },
+  {
+   "t0": 11.14,
+   "t1": 11.86,
+   "dur": 0.72,
+   "after": 26
+  },
+  {
+   "t0": 12.46,
+   "t1": 12.98,
+   "dur": 0.52,
+   "after": 28
+  },
+  {
+   "t0": 13.58,
+   "t1": 14.2,
+   "dur": 0.62,
+   "after": 30
+  },
+  {
+   "t0": 14.82,
+   "t1": 15.92,
+   "dur": 1.1,
+   "after": 33
+  },
+  {
+   "t0": 19.72,
+   "t1": 20.4,
+   "dur": 0.68,
+   "after": 43
+  },
+  {
+   "t0": 21.02,
+   "t1": 23.16,
+   "dur": 2.14,
+   "after": 45
+  },
+  {
+   "t0": 23.84,
+   "t1": 24.98,
+   "dur": 1.14,
+   "after": 46
+  },
+  {
+   "t0": 25.66,
+   "t1": 26.28,
+   "dur": 0.62,
+   "after": 48
+  },
+  {
+   "t0": 30.46,
+   "t1": 31.42,
+   "dur": 0.96,
+   "after": 62
+  },
+  {
+   "t0": 34.54,
+   "t1": 35.08,
+   "dur": 0.54,
+   "after": 72
+  },
+  {
+   "t0": 35.96,
+   "t1": 36.62,
+   "dur": 0.66,
+   "after": 75
+  },
+  {
+   "t0": 37.58,
+   "t1": 38.7,
+   "dur": 1.12,
+   "after": 79
+  },
+  {
+   "t0": 39.98,
+   "t1": 40.7,
+   "dur": 0.72,
+   "after": 83
+  },
+  {
+   "t0": 42.44,
+   "t1": 43.68,
+   "dur": 1.24,
+   "after": 85
+  },
+  {
+   "t0": 44,
+   "t1": 44.5,
+   "dur": 0.5,
+   "after": 87
+  },
+  {
+   "t0": 45.46,
+   "t1": 46.32,
+   "dur": 0.86,
+   "after": 91
+  },
+  {
+   "t0": 48.28,
+   "t1": 49.52,
+   "dur": 1.24,
+   "after": 96
+  },
+  {
+   "t0": 51.6,
+   "t1": 52.64,
+   "dur": 1.04,
+   "after": 101
+  }
+ ],
+ "numbers": [
+  {
+   "i": 8,
+   "w": "21",
+   "t0": 1.98
+  },
+  {
+   "i": 14,
+   "w": "una",
+   "t0": 6.54
+  },
+  {
+   "i": 20,
+   "w": "96",
+   "t0": 8.8
+  },
+  {
+   "i": 38,
+   "w": "66",
+   "t0": 17.24
+  },
+  {
+   "i": 46,
+   "w": "254.",
+   "t0": 23.16
+  },
+  {
+   "i": 67,
+   "w": "tres",
+   "t0": 32.64
+  },
+  {
+   "i": 79,
+   "w": "mitad.",
+   "t0": 37.36
+  },
+  {
+   "i": 90,
+   "w": "21",
+   "t0": 44.86
+  },
+  {
+   "i": 95,
+   "w": "dos",
+   "t0": 47.44
+  }
+ ],
+ "words": 106
+}

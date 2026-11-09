@@ -1,0 +1,34 @@
+{
+  "nombre": "(por definir)",
+  "nicho": "Datos curiosos y detrás de cámaras de videojuegos: errores que se volvieron icónicos, récords y polémicas",
+  "idioma": "es",
+  "estilo": "flat2d",
+  "voz": {
+    "id": "Mug8Ayw1vsZsAczGgspn",
+    "modelo": "eleven_v3",
+    "acento": "latino neutro",
+    "tono": "amigo gamer que te cuenta un secreto, con energía"
+  },
+  "metricool": {
+    "blogId": null,
+    "timezone": "America/Santiago"
+  },
+  "redes": {
+    "instagram": null,
+    "youtube": null,
+    "tiktok": null
+  },
+  "horarios": {
+    "instagram": "10:00",
+    "youtube": "16:00"
+  },
+  "videosPorSemana": 3,
+  "hashtagsBase": [
+    "#videojuegos",
+    "#gaming",
+    "#gamer",
+    "#datoscuriosos",
+    "#curiosidades"
+  ],
+  "guionModelo": null
+}

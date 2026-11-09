@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 // Background music + sound effects, synthesized in code and locked to the scenes (no third-party audio files).
-//   usage: node core/music.ts videos/<topic> [--mood warm|technical|airy|cinematic] [--bpm 100]
+//   usage: node core/music.ts canales/<canal>/videos/<topic> [--mood warm|technical|airy|cinematic] [--bpm 100]
 //   reads  scenes.json (with timings: run core/scenes.ts first)
-//   writes videos/<topic>/music.wav (48 kHz stereo): a chord pad, a soft pulse, a "swish" on every
+//   writes canales/<canal>/videos/<topic>/music.wav (48 kHz stereo): a chord pad, a soft pulse, a "swish" on every
 //   scene change and a low hit on "stat" scenes (the number is the strong moment).
 // The default mood comes from the style: papercut=warm, isometric=technical, flat2d=airy, 3d=cinematic.
-// If you bring your own music, save it as videos/<topic>/own-music.wav and this step is skipped.
+// If you bring your own music, save it as canales/<canal>/videos/<topic>/own-music.wav and this step is skipped.
 import fs from 'node:fs';
 import path from 'node:path';
 import type { Plan } from './types.ts';
@@ -13,7 +13,7 @@ import type { Plan } from './types.ts';
 const argv = process.argv.slice(2);
 const opt = (k: string, d: string) => { const i = argv.indexOf(k); return i >= 0 ? argv.splice(i, 2)[1] : d; };
 const DIR = argv[0];
-if (!DIR) { console.error('usage: node core/music.ts videos/<topic> [--mood warm]'); process.exit(2); }
+if (!DIR) { console.error('usage: node core/music.ts canales/<canal>/videos/<topic> [--mood warm]'); process.exit(2); }
 const ROOT = path.resolve(DIR);
 const E: Plan = JSON.parse(fs.readFileSync(path.join(ROOT, 'scenes.json'), 'utf8'));
 if (E.duration == null || E.scenes.some((s) => s.t0 == null)) { console.error('scenes.json has no timings: run node core/scenes.ts first'); process.exit(1); }

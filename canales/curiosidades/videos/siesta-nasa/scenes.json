@@ -1,0 +1,236 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Curiosidades del ser humano: el estudio de la NASA (1995) con pilotos de vuelos largos: 40 minutos para descansar en el asiento, se durmieron en <6 min y durmieron ~26; después estaban más alertas y rindieron mejor en el aterrizaje. NO usar las cifras 54%/34%. Enseñanza: siesta corta (~20 min) con alarma, para no despertar atontado. Arte flat2d original: avión genérico SIN aerolínea ni logo de la NASA (el nombre solo como texto), pilotos genéricos con gorra, reloj, medidores, pista de aterrizaje, despertador, almohada. Paleta: azul noche, cielo, morado, crema.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "NASA",
+   "title": "La NASA midió la siesta perfecta",
+   "highlight": "siesta",
+   "visual": "un avión genérico cruza el cielo; aparece una almohada con Z; un piloto con gorra se asoma",
+   "keys": [
+    {
+     "id": "plane",
+     "at": 0,
+     "sfx": "whoosh",
+     "t": 0
+    },
+    {
+     "id": "nap",
+     "at": 4,
+     "sfx": "pop",
+     "t": 1.34
+    },
+    {
+     "id": "pilot",
+     "at": 7,
+     "sfx": "pop",
+     "t": 3.24
+    }
+   ],
+   "t0": 0,
+   "t1": 4.55
+  },
+  {
+   "id": "study",
+   "from": 10,
+   "type": "process",
+   "label": "1995",
+   "title": "40 minutos de descanso en su asiento",
+   "highlight": "minutos",
+   "visual": "la nariz de un avión con dos ventanas: dos pilotos; el de la izquierda se pone antifaz y se reclina; aparece 40 MIN; el de la derecha maneja",
+   "keys": [
+    {
+     "id": "long",
+     "at": 18,
+     "sfx": "whoosh",
+     "t": 8.7
+    },
+    {
+     "id": "rest",
+     "at": 19,
+     "sfx": "pop",
+     "t": 9.4
+    },
+    {
+     "id": "forty",
+     "at": 20,
+     "sfx": "ding",
+     "t": 10.18
+    },
+    {
+     "id": "copilot",
+     "at": 27,
+     "sfx": "click",
+     "t": 12.94
+    }
+   ],
+   "t0": 4.55,
+   "t1": 15.03
+  },
+  {
+   "id": "sleep",
+   "from": 31,
+   "type": "stat",
+   "label": "LO QUE PASÓ",
+   "title": "Dormidos en menos de 6 minutos",
+   "highlight": "dormidos",
+   "stat": {
+    "value": "26 min",
+    "text": "de sueño, en promedio"
+   },
+   "visual": "un reloj grande: la ventana de 40 minutos en gris y un arco morado que se llena hasta 26; una luna marca cuándo se durmieron",
+   "keys": [
+    {
+     "id": "asleep",
+     "at": 33,
+     "sfx": "sparkle",
+     "t": 16.02
+    },
+    {
+     "id": "stat",
+     "at": 42,
+     "sfx": "ding",
+     "t": 19.46
+    }
+   ],
+   "t0": 15.03,
+   "t1": 21.03
+  },
+  {
+   "id": "better",
+   "from": 43,
+   "type": "object",
+   "label": "AL DESPERTAR",
+   "title": "Más alertas en el aterrizaje",
+   "highlight": "aterrizaje",
+   "visual": "dos barras ALERTA y RINDE suben; un avión baja y aterriza suave en una pista",
+   "keys": [
+    {
+     "id": "alert",
+     "at": 47,
+     "sfx": "pop",
+     "t": 23.24
+    },
+    {
+     "id": "better",
+     "at": 50,
+     "sfx": "pop",
+     "t": 24.18
+    },
+    {
+     "id": "land",
+     "at": 58,
+     "sfx": [
+      "whoosh",
+      "boing@0.3"
+     ],
+     "t": 27.88
+    }
+   ],
+   "t0": 21.03,
+   "t1": 28.95
+  },
+  {
+   "id": "short",
+   "from": 59,
+   "type": "comparison",
+   "label": "OJO",
+   "title": "Corta, para no despertar atontado",
+   "highlight": "corta",
+   "visual": "izquierda: reloj 2 HORAS con X y una persona mareada con estrellitas; derecha: 20 MIN con check y una persona feliz",
+   "keys": [
+    {
+     "id": "twoh",
+     "at": 66,
+     "sfx": "snip",
+     "t": 31.86
+    },
+    {
+     "id": "short",
+     "at": 69,
+     "sfx": "ding",
+     "t": 33.3
+    },
+    {
+     "id": "dizzy",
+     "at": 73,
+     "sfx": "boing",
+     "t": 35.04
+    }
+   ],
+   "t0": 28.95,
+   "t1": 36.35
+  },
+  {
+   "id": "tip",
+   "from": 74,
+   "type": "process",
+   "label": "POR ESO",
+   "title": "Siesta de 20 minutos + alarma",
+   "highlight": "alarma",
+   "visual": "sol de media tarde; una persona bosteza; aparece 20 MIN; un despertador suena y se sacude",
+   "keys": [
+    {
+     "id": "afternoon",
+     "at": 82,
+     "sfx": "pop",
+     "t": 38.38
+    },
+    {
+     "id": "twenty",
+     "at": 89,
+     "sfx": "ding",
+     "t": 41.1
+    },
+    {
+     "id": "alarm",
+     "at": 94,
+     "sfx": [
+      "jingle",
+      "jingle@0.2"
+     ],
+     "t": 42.94
+    }
+   ],
+   "t0": 36.35,
+   "t1": 43.89
+  },
+  {
+   "id": "closing",
+   "from": 95,
+   "type": "closing",
+   "label": "O SEA",
+   "title": "Si la NASA la aprueba… tienes excusa",
+   "highlight": "excusa",
+   "visual": "una almohada; cae un sello APROBADO; salen Z; burbujas de comentarios",
+   "keys": [
+    {
+     "id": "stamp",
+     "at": 101,
+     "sfx": "punch",
+     "t": 45.9
+    },
+    {
+     "id": "excuse",
+     "at": 104,
+     "sfx": "sparkle",
+     "t": 47.48
+    },
+    {
+     "id": "comments",
+     "at": 110,
+     "sfx": "pop",
+     "t": 50.86
+    }
+   ],
+   "t0": 43.89,
+   "t1": 52
+  }
+ ],
+ "duration": 52
+}

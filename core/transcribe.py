@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Pipeline step 1: the audio -> every word with its timing (faster-whisper, local, multilingual).
-   usage: .venv/bin/python core/transcribe.py videos/<topic> [--model small] [--language es]
-   reads  videos/<topic>/audio.wav (or audio.mp3 / audio.m4a)
-   writes videos/<topic>/words.json: { duration, language, text, words: [{ w, t0, t1 }] }
+   usage: .venv/bin/python core/transcribe.py canales/<canal>/videos/<topic> [--model small] [--language es]
+   (without --language it uses the channel's "idioma" from canal.json, else Spanish)
+   reads  <video>/audio.wav (or audio.mp3 / audio.m4a)
+   writes <video>/words.json: { duration, language, text, words: [{ w, t0, t1 }] }
    If script.json exists, its text is passed to the recognizer as a hint (better spelling of names and numbers)."""
 import json
 import os
@@ -16,10 +17,20 @@ def main():
         if k in args:
             i = args.index(k); v = args[i + 1]; del args[i:i + 2]; return v
         return d
-    model, language = opt('--model', 'small'), opt('--language', 'es')
+    model, language = opt('--model', 'small'), opt('--language', None)
     if not args:
         print(__doc__); sys.exit(2)
     root = args[0]
+    if language is None:   # the channel's language (nearest canal.json above the video), else Spanish
+        language = 'es'
+        d = os.path.abspath(root)
+        while d != os.path.dirname(d):
+            c = os.path.join(d, 'canal.json')
+            if os.path.exists(c):
+                with open(c, encoding='utf-8') as f:
+                    language = json.load(f).get('idioma') or 'es'
+                break
+            d = os.path.dirname(d)
     audio = next((os.path.join(root, f) for f in ('audio.wav', 'audio.mp3', 'audio.m4a') if os.path.exists(os.path.join(root, f))), None)
     if not audio:
         print('no audio.wav / audio.mp3 / audio.m4a in', root); sys.exit(1)

@@ -1,0 +1,208 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Videojuegos: el Creeper de Minecraft nació en 2009 de un error de Markus 'Notch' Persson al programar el cerdo (cambió largo por alto); lo pintó de verde, lo hizo perseguir y explotar. Minecraft es el juego más vendido de la historia (+300 millones). Arte flat2d ORIGINAL y de bloques: NO dibujar el Creeper ni el cerdo de Minecraft tal cual (bloque verde genérico con patas y ojos de dibujo, cerdo de bloques genérico); el nombre solo como texto. Ventanas de error, código, explosión de píxeles. Paleta del canal: morado oscuro con neones (cian, magenta, verde).",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "MINECRAFT",
+   "title": "El monstruo más famoso: un error",
+   "highlight": "error",
+   "visual": "un bloque verde con patas aparece con un signo de pregunta; una ventana roja ERROR salta encima",
+   "keys": [
+    {
+     "id": "monster",
+     "at": 1,
+     "sfx": "pop",
+     "t": 0.26
+    },
+    {
+     "id": "error",
+     "at": 7,
+     "sfx": "punch",
+     "t": 3
+    }
+   ],
+   "t0": 0,
+   "t1": 3.99
+  },
+  {
+   "id": "code",
+   "from": 10,
+   "type": "object",
+   "label": "2009",
+   "title": "Hacía un cerdo escribiendo código",
+   "highlight": "código",
+   "visual": "un programador con su laptop; en la pantalla aparece un cerdo de bloques; líneas de código de colores se escriben solas",
+   "keys": [
+    {
+     "id": "dev",
+     "at": 13,
+     "sfx": "pop",
+     "t": 5.76
+    },
+    {
+     "id": "pig",
+     "at": 19,
+     "sfx": "oink",
+     "t": 8.3
+    },
+    {
+     "id": "code",
+     "at": 25,
+     "sfx": "click",
+     "t": 10.66
+    }
+   ],
+   "t0": 3.99,
+   "t1": 12.61
+  },
+  {
+   "id": "mistake",
+   "from": 32,
+   "type": "comparison",
+   "label": "EL ERROR",
+   "title": "Cambió el largo por el alto",
+   "highlight": "alto",
+   "visual": "una ventana de error; el cerdo de bloques acostado se pone de pie: queda alto, flaco y raro",
+   "keys": [
+    {
+     "id": "oops",
+     "at": 34,
+     "sfx": "boing",
+     "t": 13.44
+    },
+    {
+     "id": "swap",
+     "at": 37,
+     "sfx": "whoosh",
+     "t": 14.82
+    },
+    {
+     "id": "thin",
+     "at": 48,
+     "sfx": "boing",
+     "t": 17.78
+    }
+   ],
+   "t0": 12.61,
+   "t1": 19.11
+  },
+  {
+   "id": "green",
+   "from": 51,
+   "type": "process",
+   "label": "EN VEZ DE BORRARLO",
+   "title": "Verde, te persigue… ¡y explota!",
+   "highlight": "verde",
+   "visual": "un tacho de basura se cierra sin él; el bloque se pinta verde, persigue a un jugador y explota en píxeles",
+   "keys": [
+    {
+     "id": "erase",
+     "at": 56,
+     "sfx": "snip",
+     "t": 20.4
+    },
+    {
+     "id": "green",
+     "at": 60,
+     "sfx": "sparkle",
+     "t": 21.62
+    },
+    {
+     "id": "chase",
+     "at": 63,
+     "sfx": "whoosh",
+     "t": 22.52
+    },
+    {
+     "id": "boom",
+     "at": 64,
+     "sfx": "punch",
+     "t": 23.28
+    }
+   ],
+   "t0": 19.11,
+   "t1": 24.3
+  },
+  {
+   "id": "today",
+   "from": 66,
+   "type": "stat",
+   "label": "HOY",
+   "title": "El juego más vendido de la historia",
+   "highlight": "vendido",
+   "stat": {
+    "value": "+300 M",
+    "text": "copias vendidas"
+   },
+   "visual": "el bloque verde con corona sobre un trofeo; aparece el nombre CREEPER",
+   "keys": [
+    {
+     "id": "name",
+     "at": 70,
+     "sfx": "ding",
+     "t": 26.18
+    },
+    {
+     "id": "symbol",
+     "at": 74,
+     "sfx": "sparkle",
+     "t": 27.28
+    },
+    {
+     "id": "stat",
+     "at": 80,
+     "sfx": "pop",
+     "t": 29.1
+    }
+   ],
+   "t0": 24.3,
+   "t1": 30.37
+  },
+  {
+   "id": "closing",
+   "from": 84,
+   "type": "closing",
+   "label": "O SEA",
+   "title": "Equivocarte puede salir mejor",
+   "highlight": "equivocarte",
+   "visual": "una ventana de ERROR se transforma en una estrella; mini explosión; burbujas de comentarios",
+   "keys": [
+    {
+     "id": "oops",
+     "at": 88,
+     "sfx": "boing",
+     "t": 31.62
+    },
+    {
+     "id": "better",
+     "at": 91,
+     "sfx": [
+      "ding",
+      "sparkle@0.1"
+     ],
+     "t": 32.7
+    },
+    {
+     "id": "boom",
+     "at": 98,
+     "sfx": "punch",
+     "t": 35.02
+    },
+    {
+     "id": "comments",
+     "at": 101,
+     "sfx": "pop",
+     "t": 36
+    }
+   ],
+   "t0": 30.37,
+   "t1": 37.44
+  }
+ ],
+ "duration": 37.44
+}

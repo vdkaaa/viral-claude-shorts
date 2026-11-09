@@ -1,0 +1,219 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Curiosidades del ser humano: el cerebro es ~2% del peso corporal y usa ~20% de la energía en reposo, por sus ~86 mil millones de neuronas; no deja de gastar ni cuando duermes. Enseñanza: dormir bien y comer a tus horas es cargarle la batería. Arte flat2d original: un cerebro rosado con cara (personaje del video), balanza, gráfico de torta, red de neuronas que se encienden, cama, plato, batería, reloj. Paleta del canal: morado, azul noche, verde azulado, crema.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "TU CEREBRO",
+   "title": "Tu cerebro come la quinta parte",
+   "highlight": "quinta",
+   "visual": "un cerebro con cara aparece; le cuelga una etiqueta +1 KG; rayos de energía vuelan hacia él y se los come",
+   "keys": [
+    {
+     "id": "brain",
+     "at": 1,
+     "sfx": "pop",
+     "t": 0.2
+    },
+    {
+     "id": "kilo",
+     "at": 7,
+     "sfx": "click",
+     "t": 1.98
+    },
+    {
+     "id": "eat",
+     "at": 10,
+     "sfx": [
+      "whoosh",
+      "punch@0.35"
+     ],
+     "t": 3.4
+    }
+   ],
+   "t0": 0,
+   "t1": 5.99
+  },
+  {
+   "id": "weight",
+   "from": 17,
+   "type": "stat",
+   "label": "PESO",
+   "title": "Apenas el 2% de tu peso",
+   "highlight": "peso",
+   "stat": {
+    "value": "2%",
+    "text": "de tu peso"
+   },
+   "visual": "una balanza: el cerebro chiquito a un lado y una persona al otro; la balanza se inclina hacia la persona",
+   "keys": [
+    {
+     "id": "stat",
+     "at": 23,
+     "sfx": "boing",
+     "t": 8.26
+    }
+   ],
+   "t0": 5.99,
+   "t1": 9.97
+  },
+  {
+   "id": "energy",
+   "from": 28,
+   "type": "stat",
+   "label": "ENERGÍA",
+   "title": "Pero gasta el 20% de tu energía",
+   "highlight": "energía",
+   "stat": {
+    "value": "20%",
+    "text": "de la energía de tu cuerpo"
+   },
+   "visual": "el cerebro descansa en un sillón; un gráfico de torta saca una tajada amarilla del 20%",
+   "keys": [
+    {
+     "id": "rest",
+     "at": 30,
+     "sfx": "pop",
+     "t": 10.72
+    },
+    {
+     "id": "stat",
+     "at": 37,
+     "sfx": [
+      "ding",
+      "sparkle@0.1"
+     ],
+     "t": 13.74
+    }
+   ],
+   "t0": 9.97,
+   "t1": 17.15
+  },
+  {
+   "id": "neurons",
+   "from": 46,
+   "type": "object",
+   "label": "¿POR QUÉ TANTO?",
+   "title": "86 mil millones de neuronas",
+   "highlight": "neuronas",
+   "visual": "una red de neuronas se dibuja; aparece el número 86.000.000.000; las neuronas se encienden en amarillo",
+   "keys": [
+    {
+     "id": "neurons",
+     "at": 51,
+     "sfx": "whoosh",
+     "t": 19.54
+    },
+    {
+     "id": "num",
+     "at": 54,
+     "sfx": "pop",
+     "t": 21.4
+    },
+    {
+     "id": "lights",
+     "at": 59,
+     "sfx": "sparkle",
+     "t": 24.34
+    }
+   ],
+   "t0": 17.15,
+   "t1": 25.84
+  },
+  {
+   "id": "sleep",
+   "from": 62,
+   "type": "object",
+   "label": "OJO",
+   "title": "No para ni cuando duermes",
+   "highlight": "duermes",
+   "visual": "el cerebro con gorro de dormir sobre una almohada, cierra los ojos; salen Z pero sigue brillando y le siguen llegando rayos",
+   "keys": [
+    {
+     "id": "sleep",
+     "at": 70,
+     "sfx": "sparkle",
+     "t": 29.82
+    }
+   ],
+   "t0": 25.84,
+   "t1": 31.25
+  },
+  {
+   "id": "tip",
+   "from": 71,
+   "type": "process",
+   "label": "POR ESO",
+   "title": "Dormir y comer: carga tu batería",
+   "highlight": "batería",
+   "visual": "una cama y un plato aparecen; flechas hacia una batería gigante que se llena en verde con el cerebro feliz encima",
+   "keys": [
+    {
+     "id": "bed",
+     "at": 73,
+     "sfx": "pop",
+     "t": 32.2
+    },
+    {
+     "id": "food",
+     "at": 76,
+     "sfx": "pop",
+     "t": 33.16
+    },
+    {
+     "id": "battery",
+     "at": 87,
+     "sfx": [
+      "ding",
+      "sparkle@0.1"
+     ],
+     "t": 36.72
+    }
+   ],
+   "t0": 31.25,
+   "t1": 39.99
+  },
+  {
+   "id": "closing",
+   "from": 95,
+   "type": "closing",
+   "label": "O SEA",
+   "title": "El que más come… y no se mueve",
+   "highlight": "come",
+   "visual": "el cerebro se come un plato de rayos; una placa 0 PASOS; un reloj; burbujas de comentarios",
+   "keys": [
+    {
+     "id": "eat",
+     "at": 103,
+     "sfx": "punch",
+     "t": 42.84
+    },
+    {
+     "id": "still",
+     "at": 106,
+     "sfx": "boing",
+     "t": 44.08
+    },
+    {
+     "id": "clock",
+     "at": 111,
+     "sfx": "click",
+     "t": 46.26
+    },
+    {
+     "id": "comments",
+     "at": 117,
+     "sfx": "pop",
+     "t": 48.4
+    }
+   ],
+   "t0": 39.99,
+   "t1": 49.52
+  }
+ ],
+ "duration": 49.52
+}

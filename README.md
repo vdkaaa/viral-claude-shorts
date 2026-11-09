@@ -22,12 +22,12 @@ audio (+ assets, notes) + style
  4. Storyboard    one frame per scene, to approve           core/storyboard.ts  (+ live preview: core/preview.ts)
  5. Render        the style's framework                     core/render.ts
  6. Review        sync, loudness, text, cuts                core/review.ts
- → videos/<topic>/final.mp4 + report.md
+ → canales/<canal>/videos/<topic>/final.mp4 + report.md
 ```
 
 The contract is `scenes.json`: a list of scenes that point at **words** in the audio (not at seconds). The style turns that file into animation:
 - its **library** ships generic scenes per type (question, object, process, comparison, stat, map, asset, closing);
-- the AI writes each video's **custom visuals** in `videos/<topic>/visuals.ts`.
+- the AI writes each video's **custom visuals** in `canales/<canal>/videos/<topic>/visuals.ts`.
 
 On top sits a **titles layer**: a label, a title whose key word gets highlighted when you say it, and a card with the stat.
 
@@ -43,7 +43,7 @@ You install just one thing by hand: Claude Code. Everything else (Git, Node, ffm
 
 **3. Paste the setup prompt**: copy the block in [prompts/setup-flat2d.md](prompts/setup-flat2d.md) and send it. Claude installs whatever is missing, downloads the project and makes you a basic test animation (no voice). It opens in a preview in your browser at http://localhost:3002: when it plays, you're ready. If at some point it needs your computer's password, it tells you what to paste and where.
 
-**4. Make your video**: open a new chat in Claude Code in the `viral-claude-shorts` folder, drag the script's audio in and say what you want, for example *"anima este audio, la idea es explicar por qué el pan se pone duro"*. The project's `CLAUDE.md` tells Claude the whole process: it shows you a storyboard, waits for your approval and delivers `videos/<topic>/final.mp4`. Want more control (assets, colors, specific scenes)? Use the template in [prompts/production.md](prompts/production.md).
+**4. Make your video**: open a new chat in Claude Code in the `viral-claude-shorts` folder, drag the script's audio in and say what you want, for example *"anima este audio, la idea es explicar por qué el pan se pone duro"*. The project's `CLAUDE.md` tells Claude the whole process: it shows you a storyboard, waits for your approval and delivers `canales/<canal>/videos/<topic>/final.mp4`. Want more control (assets, colors, specific scenes)? Use the template in [prompts/production.md](prompts/production.md).
 
 <details>
 <summary>Doing it by hand, without Claude Code</summary>
@@ -58,23 +58,23 @@ python3 -m venv .venv && .venv/bin/pip install faster-whisper
 npm install && cd styles/flat2d && npm install
 ```
 
-One video, with your audio at `videos/my-topic/audio.wav`:
+One video, with your audio at `canales/my-channel/videos/my-topic/audio.wav`:
 
 ```bash
-.venv/bin/python core/transcribe.py videos/my-topic
-node core/analyze.ts videos/my-topic
-# (write videos/my-topic/scenes.json and visuals.ts)
-node core/scenes.ts videos/my-topic
+.venv/bin/python core/transcribe.py canales/my-channel/videos/my-topic
+node core/analyze.ts canales/my-channel/videos/my-topic
+# (write canales/my-channel/videos/my-topic/scenes.json and visuals.ts)
+node core/scenes.ts canales/my-channel/videos/my-topic
 npm run typecheck
-node core/storyboard.ts videos/my-topic
-node core/render.ts videos/my-topic
+node core/storyboard.ts canales/my-channel/videos/my-topic
+node core/render.ts canales/my-channel/videos/my-topic
 ```
 
-To watch it moving with its audio: `node core/preview.ts videos/my-topic` opens http://localhost:3002, or reuses it if it's already open. It stays open in the background; `--stop` closes it.
+To watch it moving with its audio: `node core/preview.ts canales/my-channel/videos/my-topic` opens http://localhost:3002, or reuses it if it's already open. It stays open in the background; `--stop` closes it.
 
-Transcription assumes Spanish; for another language add `--language en` (or its code) to `transcribe.py`.
+Transcription uses the channel's language (`idioma` in `canal.json`, Spanish by default); to force another one add `--language en` (or its code) to `transcribe.py`.
 
-No recorded audio? `node core/voice.ts videos/my-topic` generates it from `script.json` with your cloned voice on a local [voicebox](http://127.0.0.1:17493) server, in a single take so the intonation flows.
+No recorded audio? `node core/voice.ts canales/my-channel/videos/my-topic` generates it from `script.json` with your cloned voice on a local [voicebox](http://127.0.0.1:17493) server, in a single take so the intonation flows.
 
 </details>
 
@@ -85,11 +85,14 @@ No recorded audio? `node core/voice.ts videos/my-topic` generates it from `scrip
 ## Structure
 
 ```
-core/            transcribe, analyze, scenes (contract), storyboard, preview, render, mix, music, review, voice, types
+core/            transcribe, analyze, scenes (contract), storyboard, preview, render, mix, music, review, voice,
+                 elevenlabs, upload, canal (channels), types
 styles/          flat2d/ — adapter, engine, theme, library, INSTALL.md, USAGE.md
-videos/<topic>/  audio.wav, scenes.json, visuals.ts, storyboard.png, final.mp4, report.md
-                 blue-sky/ is the example; hello/ is the setup's test animation (made on your computer)
-prompts/         setup-flat2d.md, production.md
+canales/<canal>/ one folder per account/niche: canal.json, formula.md, ideas.md, resultados.md and
+                 videos/<topic>/ (guion.md, audio, scenes.json, visuals.ts, storyboard.png, final.mp4, publish.json)
+                 _plantilla/ is the template (node core/canal.ts nuevo <name>); comparacion.md compares channels
+ejemplos/        blue-sky/ is the example; hello/ is the setup's test animation (made on your computer)
+prompts/         setup-flat2d.md, production.md, publish.md, results.md
 CLAUDE.md        what Claude reads in every chat here: a short request with an audio runs the whole production process
 ```
 

@@ -1,0 +1,260 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Videojuegos: en Pac-Man (Namco, 1980, Toru Iwatani) cada fantasma persigue distinto: Blinky (rojo) va directo a tu casilla; Pinky (rosado) apunta 4 casillas delante de ti; Inky (celeste) usa un punto delante de ti y la posición de Blinky; Clyde (naranja) persigue si está lejos y si se acerca a menos de 8 casillas vuelve a su esquina; cada cierto rato todos se dispersan a sus esquinas. Arte flat2d ORIGINAL: NO dibujar a Pac-Man ni a sus fantasmas con su forma característica: fantasmitas de sábana de dibujo (rojo, rosado, celeste, naranja) y un círculo amarillo genérico con ojos como jugador; laberinto genérico de neón; los nombres solo como texto. Paleta del canal: morado oscuro con neones.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "PAC-MAN",
+   "title": "No te persiguen igual",
+   "highlight": "igual",
+   "visual": "cuatro fantasmitas de sábana de colores aparecen en un laberinto de neón y salen cada uno en una dirección distinta hacia el jugador",
+   "keys": [
+    {
+     "id": "ghosts",
+     "at": 1,
+     "sfx": [
+      "pop",
+      "pop@0.1",
+      "pop@0.2",
+      "pop@0.3"
+     ],
+     "t": 0.38
+    },
+    {
+     "id": "chase",
+     "at": 8,
+     "sfx": "whoosh",
+     "t": 2.88
+    }
+   ],
+   "t0": 0,
+   "t1": 4.07
+  },
+  {
+   "id": "creator",
+   "from": 10,
+   "type": "object",
+   "label": "1980 · TORU IWATANI",
+   "title": "Cada uno, su forma de cazarte",
+   "highlight": "cazarte",
+   "visual": "un diseñador con lápiz junto a un plano; aparecen cuatro tarjetas, cada fantasma con su ícono: flecha, mira, compás, zigzag",
+   "keys": [
+    {
+     "id": "creator",
+     "at": 12,
+     "sfx": "pop",
+     "t": 5.16
+    },
+    {
+     "id": "each",
+     "at": 19,
+     "sfx": [
+      "click",
+      "click@0.15",
+      "click@0.3",
+      "click@0.45"
+     ],
+     "t": 7.18
+    }
+   ],
+   "t0": 4.07,
+   "t1": 9.67
+  },
+  {
+   "id": "blinky",
+   "from": 26,
+   "type": "process",
+   "label": "BLINKY",
+   "title": "El rojo va directo a ti",
+   "highlight": "directo",
+   "visual": "el fantasma rojo aparece; una flecha recta va de él al jugador y lo sigue",
+   "keys": [
+    {
+     "id": "red",
+     "at": 26,
+     "sfx": "pop",
+     "t": 9.92
+    },
+    {
+     "id": "direct",
+     "at": 30,
+     "sfx": "whoosh",
+     "t": 11.4
+    }
+   ],
+   "t0": 9.67,
+   "t1": 12.87
+  },
+  {
+   "id": "pinky",
+   "from": 34,
+   "type": "process",
+   "label": "PINKY",
+   "title": "El rosado te tiende una emboscada",
+   "highlight": "emboscada",
+   "visual": "el jugador avanza; se marcan 4 casillas delante de él y una mira; el fantasma rosado llega a esa mira y lo espera",
+   "keys": [
+    {
+     "id": "pink",
+     "at": 34,
+     "sfx": "pop",
+     "t": 13.12
+    },
+    {
+     "id": "four",
+     "at": 38,
+     "sfx": [
+      "click",
+      "click@0.1",
+      "click@0.2",
+      "click@0.3"
+     ],
+     "t": 14.84
+    },
+    {
+     "id": "ambush",
+     "at": 46,
+     "sfx": "punch",
+     "t": 17.56
+    }
+   ],
+   "t0": 12.87,
+   "t1": 18.63
+  },
+  {
+   "id": "inky",
+   "from": 47,
+   "type": "process",
+   "label": "INKY",
+   "title": "El celeste calcula con Blinky",
+   "highlight": "calcula",
+   "visual": "líneas punteadas del fantasma rojo a un punto delante del jugador y de ahí a una mira; el fantasma celeste va hacia la mira",
+   "keys": [
+    {
+     "id": "blue",
+     "at": 47,
+     "sfx": "pop",
+     "t": 18.88
+    },
+    {
+     "id": "calc",
+     "at": 50,
+     "sfx": "sparkle",
+     "t": 20.44
+    },
+    {
+     "id": "blinky",
+     "at": 56,
+     "sfx": "whoosh",
+     "t": 22.36
+    }
+   ],
+   "t0": 18.63,
+   "t1": 23.21
+  },
+  {
+   "id": "clyde",
+   "from": 57,
+   "type": "process",
+   "label": "CLYDE",
+   "title": "El naranja huye a su esquina",
+   "highlight": "esquina",
+   "visual": "el fantasma naranja se acerca al jugador, se asusta con una gota de sudor y escapa a su esquina",
+   "keys": [
+    {
+     "id": "orange",
+     "at": 58,
+     "sfx": "pop",
+     "t": 23.58
+    },
+    {
+     "id": "chase",
+     "at": 63,
+     "sfx": "whoosh",
+     "t": 25.1
+    },
+    {
+     "id": "near",
+     "at": 67,
+     "sfx": "boing",
+     "t": 26.5
+    },
+    {
+     "id": "back",
+     "at": 69,
+     "sfx": "whoosh",
+     "t": 27.48
+    }
+   ],
+   "t0": 23.21,
+   "t1": 29.4
+  },
+  {
+   "id": "scatter",
+   "from": 77,
+   "type": "object",
+   "label": "MODO DISPERSIÓN",
+   "title": "Tu momento para respirar",
+   "highlight": "respirar",
+   "visual": "los cuatro fantasmas salen disparados a las cuatro esquinas; el jugador en el centro respira aliviado",
+   "keys": [
+    {
+     "id": "corners",
+     "at": 87,
+     "sfx": "whoosh",
+     "t": 32.44
+    },
+    {
+     "id": "breathe",
+     "at": 92,
+     "sfx": "sparkle",
+     "t": 34.3
+    }
+   ],
+   "t0": 29.4,
+   "t1": 35.19
+  },
+  {
+   "id": "closing",
+   "from": 93,
+   "type": "closing",
+   "label": "O SEA",
+   "title": "Te cazaban en equipo",
+   "highlight": "equipo",
+   "visual": "un trébol tachado (no era mala suerte); los cuatro fantasmas rodean al jugador; un signo de pregunta; burbujas de comentarios",
+   "keys": [
+    {
+     "id": "luck",
+     "at": 97,
+     "sfx": "snip",
+     "t": 36.48
+    },
+    {
+     "id": "team",
+     "at": 103,
+     "sfx": "punch",
+     "t": 38.46
+    },
+    {
+     "id": "question",
+     "at": 105,
+     "sfx": "pop",
+     "t": 39.76
+    },
+    {
+     "id": "comments",
+     "at": 110,
+     "sfx": "pop",
+     "t": 41.66
+    }
+   ],
+   "t0": 35.19,
+   "t1": 43.44
+  }
+ ],
+ "duration": 43.44
+}

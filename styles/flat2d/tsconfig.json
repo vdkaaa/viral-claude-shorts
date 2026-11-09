@@ -12,5 +12,5 @@
     "skipLibCheck": true,
     "types": ["gsap"]
   },
-  "include": ["globals.d.ts", "library.ts", "engine.ts", "../../videos/*/visuals.ts"]
+  "include": ["globals.d.ts", "library.ts", "engine.ts", "../../canales/*/videos/*/visuals.ts", "../../ejemplos/*/visuals.ts"]
 }

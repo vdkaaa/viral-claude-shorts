@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // final.mp4 -> a public link that Metricool can download to publish it on Instagram / YouTube.
-//   usage: node core/upload.ts videos/<topic> [--tag shorts]
-// Uploads videos/<topic>/final.mp4 as <topic>.mp4 to a GitHub release (default tag "shorts"; created if missing),
-// prints the public URL and saves it as "videoUrl" in videos/<topic>/publish.json.
+//   usage: node core/upload.ts canales/<canal>/videos/<topic> [--tag shorts]
+// Uploads canales/<canal>/videos/<topic>/final.mp4 as <topic>.mp4 to a GitHub release (default tag "shorts"; created if missing),
+// prints the public URL and saves it as "videoUrl" in canales/<canal>/videos/<topic>/publish.json.
 // Needs: the GitHub CLI logged in (`gh auth login`) and a PUBLIC repo (on a private repo the link needs a login and
 // Metricool can't download it).
 import { spawnSync } from 'node:child_process';
@@ -14,7 +14,7 @@ const argv = process.argv.slice(2);
 const opt = (k: string, d: string) => { const i = argv.indexOf(k); return i >= 0 ? argv.splice(i, 2)[1] : d; };
 const TAG = opt('--tag', 'shorts');
 const DIR = argv[0];
-if (!DIR) { console.error('usage: node core/upload.ts videos/<topic> [--tag shorts]'); process.exit(2); }
+if (!DIR) { console.error('usage: node core/upload.ts canales/<canal>/videos/<topic> [--tag shorts]'); process.exit(2); }
 const ROOT = path.resolve(DIR), TOPIC = path.basename(ROOT), VIDEO = path.join(ROOT, 'final.mp4');
 if (!fs.existsSync(VIDEO)) { console.error(`${VIDEO} doesn't exist: render it first (node core/render.ts ${DIR})`); process.exit(1); }
 

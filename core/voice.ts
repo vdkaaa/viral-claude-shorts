@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 // Script -> audio with your cloned voice (local voicebox server). Only needed if you DON'T bring your own audio.
-//   usage: node core/voice.ts videos/<topic> [--server http://127.0.0.1:17493] [--profile "My voice"] [--per-line]
+//   usage: node core/voice.ts canales/<canal>/videos/<topic> [--server http://127.0.0.1:17493] [--profile "My voice"] [--per-line]
 //   By default it generates the WHOLE script in ONE take: the intonation flows between sentences (with --per-line, one take per
 //   line joined with pauses: handy to redo a single line, but it sounds choppier).
-// reads  videos/<topic>/script.json:
+// reads  canales/<canal>/videos/<topic>/script.json:
 //   { "language": "es", "lead": 0.6, "tail": 1.2, "lines": [ { "id": "hook", "text": "...", "pause": 0.35 }, ... ] }
-// writes videos/<topic>/voice/take.wav (or voice/<id>.wav per line; reused if the text didn't change)
-//   and videos/<topic>/audio.wav (48 kHz mono: the lines with their pauses) -> the pipeline's input.
+// writes canales/<canal>/videos/<topic>/voice/take.wav (or voice/<id>.wav per line; reused if the text didn't change)
+//   and canales/<canal>/videos/<topic>/audio.wav (48 kHz mono: the lines with their pauses) -> the pipeline's input.
 // To regenerate a line: delete voice/<id>.wav (or change its text) and run again.
 import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
@@ -18,7 +18,7 @@ const opt = (k: string, d: string) => { const i = argv.indexOf(k); return i >= 0
 const SERVER = opt('--server', process.env.VOICEBOX_URL || 'http://127.0.0.1:17493');
 const PROFILE = opt('--profile', process.env.VOICEBOX_PROFILE || 'My voice');
 const DIR = argv[0];
-if (!DIR) { console.error('usage: node core/voice.ts videos/<topic> [--profile "My voice"]'); process.exit(2); }
+if (!DIR) { console.error('usage: node core/voice.ts canales/<canal>/videos/<topic> [--profile "My voice"]'); process.exit(2); }
 const ROOT = path.resolve(DIR), VDIR = path.join(ROOT, 'voice'), SR = 48000;
 const G: Script = JSON.parse(fs.readFileSync(path.join(ROOT, 'script.json'), 'utf8'));
 fs.mkdirSync(VDIR, { recursive: true });

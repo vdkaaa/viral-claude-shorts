@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // Pipeline step 2: timed words -> phrases, pauses and numbers, so the visual plan sticks to the voice.
-//   usage: node core/analyze.ts videos/<topic>
-//   reads  videos/<topic>/words.json
-//   writes videos/<topic>/analysis.json and prints a readable table (the one the agent uses to write scenes.json)
+//   usage: node core/analyze.ts canales/<canal>/videos/<topic>
+//   reads  canales/<canal>/videos/<topic>/words.json
+//   writes canales/<canal>/videos/<topic>/analysis.json and prints a readable table (the one the agent uses to write scenes.json)
 // Phrases: split at a final punctuation mark or at a pause >= 0.28 s. Every word carries its global index (#),
 // which is how scenes.json points at it ("at": 12 = when word 12 starts).
 import fs from 'node:fs';
@@ -10,7 +10,7 @@ import path from 'node:path';
 import type { Words } from './types.ts';
 
 const dir = process.argv[2];
-if (!dir) { console.error('usage: node core/analyze.ts videos/<topic>'); process.exit(2); }
+if (!dir) { console.error('usage: node core/analyze.ts canales/<canal>/videos/<topic>'); process.exit(2); }
 const ROOT = path.resolve(dir);
 const P: Words = JSON.parse(fs.readFileSync(path.join(ROOT, 'words.json'), 'utf8'));
 const W = P.words.map((p, i) => ({ ...p, i }));

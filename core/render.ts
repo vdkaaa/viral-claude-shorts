@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Pipeline steps 5 + 6: full render with the style's framework, mix with the voice and the music, review.
-//   usage: node core/render.ts videos/<topic> [--no-music] [--music -16]
-//   -> videos/<topic>/final.mp4 and videos/<topic>/report.md
+//   usage: node core/render.ts canales/<canal>/videos/<topic> [--no-music] [--music -16]
+//   -> canales/<canal>/videos/<topic>/final.mp4 and canales/<canal>/videos/<topic>/report.md
 import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -10,7 +10,7 @@ import { load, ROOT } from './style.ts';
 const argv = process.argv.slice(2);
 const noMusic = argv.includes('--no-music');
 const mi = argv.indexOf('--music'), musicDb = mi >= 0 ? argv[mi + 1] : '-16';
-if (!argv[0] || argv[0].startsWith('--')) { console.error('usage: node core/render.ts videos/<topic>'); process.exit(2); }
+if (!argv[0] || argv[0].startsWith('--')) { console.error('usage: node core/render.ts canales/<canal>/videos/<topic>'); process.exit(2); }
 const { v, E, A } = await load(argv[0]);
 const t0 = Date.now();
 const node = (script: string, ...a: string[]) => { const r = spawnSync(process.execPath, [path.join(ROOT, 'core', script), ...a], { stdio: 'inherit' }); if (r.status !== 0) process.exit(r.status || 1); };

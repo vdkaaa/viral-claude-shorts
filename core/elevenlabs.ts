@@ -1,16 +1,18 @@
 #!/usr/bin/env node
 // guion.md -> audio.mp3 with the ElevenLabs API (replaces copying the text into the ElevenLabs website by hand).
-//   usage: node core/elevenlabs.ts videos/<topic> [--voice <voice id>] [--model eleven_v3] [--force]
+//   usage: node core/elevenlabs.ts canales/<canal>/videos/<topic> [--voice <voice id>] [--model eleven_v3] [--force]
 //          node core/elevenlabs.ts --voices        (lists your voices with their ids)
-// Reads the section "## Texto para pegar en ElevenLabs" of videos/<topic>/guion.md (up to the next "## " heading),
-// generates it in ONE take and writes videos/<topic>/audio.mp3, the pipeline's input.
-// Config in .env at the repo root (never committed):
+// Reads the section "## Texto para pegar en ElevenLabs" of <video>/guion.md (up to the next "## " heading),
+// generates it in ONE take and writes <video>/audio.mp3, the pipeline's input.
+// The voice, model and language come from the video's channel (canales/<canal>/canal.json: voz.id, voz.modelo, idioma);
+// what the channel leaves empty falls back to .env at the repo root (never committed):
 //   ELEVENLABS_API_KEY=...        (elevenlabs.io -> Developers -> API keys; "Text to Speech" + "Voices: read" permissions)
 //   ELEVENLABS_VOICE_ID=...       (the voice you use; see --voices)
 //   ELEVENLABS_MODEL=eleven_v3    (optional; with eleven_multilingual_v2 the [tags] are removed automatically)
 // To protect your credits it won't regenerate if audio.mp3 already exists for the same text; --force does.
 import fs from 'node:fs';
 import path from 'node:path';
+import { canalDe } from './canal.ts';
 
 const ROOTDIR = path.resolve(import.meta.dirname, '..');
 if (fs.existsSync(path.join(ROOTDIR, '.env'))) process.loadEnvFile(path.join(ROOTDIR, '.env'));
@@ -37,12 +39,15 @@ if (flag('--voices')) await listVoices();
 else await main();
 
 async function main() {
-const VOICE = opt('--voice', process.env.ELEVENLABS_VOICE_ID || '');
-const MODEL = opt('--model', process.env.ELEVENLABS_MODEL || 'eleven_v3');
 const FORCE = flag('--force');
+const voiceArg = opt('--voice', ''), modelArg = opt('--model', '');
 const DIR = argv[0];
-if (!DIR) { console.error('usage: node core/elevenlabs.ts videos/<topic> [--voice <id>] [--model eleven_v3] [--force]'); process.exit(2); }
-if (!VOICE) { console.error('missing the voice: set ELEVENLABS_VOICE_ID in .env or pass --voice <id> (list them with --voices)'); process.exit(1); }
+const canal = DIR ? canalDe(DIR)?.cfg : undefined;
+const VOICE = voiceArg || canal?.voz.id || process.env.ELEVENLABS_VOICE_ID || '';
+const MODEL = modelArg || canal?.voz.modelo || process.env.ELEVENLABS_MODEL || 'eleven_v3';
+const LANG = canal?.idioma || 'es';
+if (!DIR) { console.error('usage: node core/elevenlabs.ts canales/<canal>/videos/<topic> [--voice <id>] [--model eleven_v3] [--force]'); process.exit(2); }
+if (!VOICE) { console.error('missing the voice: set voz.id in canal.json, ELEVENLABS_VOICE_ID in .env, or pass --voice <id> (list them with --voices)'); process.exit(1); }
 
 const ROOT = path.resolve(DIR), GUION = path.join(ROOT, 'guion.md');
 if (!fs.existsSync(GUION)) { console.error(`${GUION} doesn't exist`); process.exit(1); }
@@ -62,10 +67,10 @@ if (!FORCE && fs.existsSync(OUT) && !fs.existsSync(STAMP)) {
   console.error(`${OUT} already exists and wasn't made by this script (maybe you recorded it): use --force to replace it`); process.exit(1);
 }
 
-process.stdout.write(`  generating ${text.length} characters with ${MODEL}… `);
+process.stdout.write(`  generating ${text.length} characters with ${MODEL}${canal ? ` (canal ${canal.nombre})` : ''}… `);
 const r = await fetch(`${API}/v1/text-to-speech/${VOICE}?output_format=mp3_44100_128`, {
   method: 'POST', headers,
-  body: JSON.stringify({ text, model_id: MODEL, language_code: 'es' }),
+  body: JSON.stringify({ text, model_id: MODEL, language_code: LANG }),
 });
 if (!r.ok) { console.error(`\ntext-to-speech: HTTP ${r.status} ${await r.text()}`); process.exitCode = 1; return; }
 fs.writeFileSync(OUT, Buffer.from(await r.arrayBuffer()));

@@ -29,13 +29,13 @@ It should answer `0.8.166`. GSAP is copied from `node_modules` into the project 
 ## Check that it works
 From the root, build the example's storyboard (the example ships without its voice, so it isn't rendered to MP4):
 ```bash
-node core/storyboard.ts videos/blue-sky
+node core/storyboard.ts ejemplos/blue-sky
 ```
 Then look at it moving:
 ```bash
-node core/preview.ts videos/blue-sky
+node core/preview.ts ejemplos/blue-sky
 ```
-It opens http://localhost:3002. The full render (`node core/render.ts videos/<topic>`) runs with the script's audio of each video. The review uses `hyperframes check` for the text: layout, contrast and lint.
+It opens http://localhost:3002. The full render (`node core/render.ts canales/<canal>/videos/<topic>`) runs with the script's audio of each video. The review uses `hyperframes check` for the text: layout, contrast and lint.
 
 ## Common problems
 - **`missing_timeline_registry`** in the lint: the registration `window.__timelines.main = buildTimeline()` has to be in a `<script>` inside `index.html`. The adapter already puts it there.

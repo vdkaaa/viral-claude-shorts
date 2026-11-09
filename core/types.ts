@@ -1,4 +1,4 @@
-// The shapes shared by the whole pipeline: the JSON files in videos/<topic>/ and the interface every style implements.
+// The shapes shared by the whole pipeline: the JSON files in canales/<canal>/videos/<topic>/ and the interface every style implements.
 // Types only: Node strips them when it runs the .ts files, so this file has no runtime code.
 
 // words.json (written by transcribe.py)

@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 // Pipeline step 6: MEASURED review of the final video (what the eye misses).
-//   usage: node core/review.ts videos/<topic>
+//   usage: node core/review.ts canales/<canal>/videos/<topic>
 //   1. format: 1080x1920, length = the audio's (±0.15 s)
 //   2. loudness: -14 LUFS integrated (±1), true peak <= -1 dBTP
 //   3. cuts: on every scene change the picture really changes (pixel difference well above the usual)
 //   4. dead stretches: more than 3 s with almost no motion
 //   5. text: cut off by the edge, overlapping or under the phone's interface (if the style can measure it)
-//   -> videos/<topic>/report.md and videos/<topic>/review/sheet.jpg (one frame per second, to look at it at phone size)
+//   -> canales/<canal>/videos/<topic>/report.md and canales/<canal>/videos/<topic>/review/sheet.jpg (one frame per second, to look at it at phone size)
 import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { load } from './style.ts';
 
-if (!process.argv[2]) { console.error('usage: node core/review.ts videos/<topic>'); process.exit(2); }
+if (!process.argv[2]) { console.error('usage: node core/review.ts canales/<canal>/videos/<topic>'); process.exit(2); }
 const { v, E, A } = await load(process.argv[2]);
 const VID = path.join(v, 'final.mp4'), REV = path.join(v, 'review');
 fs.mkdirSync(REV, { recursive: true });

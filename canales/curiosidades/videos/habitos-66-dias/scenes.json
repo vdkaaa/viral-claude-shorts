@@ -1,0 +1,235 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Curiosidades del ser humano: el mito de los 21 días para formar un hábito. Estudio de Lally (UCL, 2009): 96 personas, promedio 66 días, rango 18–254; saltarse un día no arruina el hábito, hacerlo a ratos sí. Enseñanza: si llevas 3 semanas y te cuesta, vas a la mitad; constancia, no perfección. Arte flat2d original: calendarios, personas genéricas, iconos (vaso de agua, manzana, zapatilla), puntos de calendario, caracol, barra de progreso, escalera. Paleta del canal: azul noche, morado, verde azulado y un fondo claro crema.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "MITO",
+   "title": "¿Un hábito en 21 días?",
+   "highlight": "días",
+   "visual": "un calendario cae con el 21; una persona lo mira con duda; un sello rojo MITO cae encima",
+   "keys": [
+    {
+     "id": "cal",
+     "at": 8,
+     "sfx": "pop",
+     "t": 1.98
+    },
+    {
+     "id": "lie",
+     "at": 11,
+     "sfx": "punch",
+     "t": 4.1
+    }
+   ],
+   "t0": 0,
+   "t1": 5.41
+  },
+  {
+   "id": "study",
+   "from": 12,
+   "type": "object",
+   "label": "LONDRES, 2009",
+   "title": "Siguieron a 96 personas",
+   "highlight": "personas",
+   "visual": "una fila de personitas aparece; luego tres tarjetas: vaso de agua, manzana, zapatilla",
+   "keys": [
+    {
+     "id": "people",
+     "at": 20,
+     "sfx": "whoosh",
+     "t": 8.8
+    },
+    {
+     "id": "water",
+     "at": 27,
+     "sfx": "pop",
+     "t": 11.86
+    },
+    {
+     "id": "fruit",
+     "at": 29,
+     "sfx": "pop",
+     "t": 12.98
+    },
+    {
+     "id": "run",
+     "at": 31,
+     "sfx": "pop",
+     "t": 14.2
+    }
+   ],
+   "t0": 5.41,
+   "t1": 15.67
+  },
+  {
+   "id": "avg",
+   "from": 34,
+   "type": "stat",
+   "label": "EL RESULTADO",
+   "title": "En promedio: 66 días",
+   "highlight": "promedio",
+   "stat": {
+    "value": "66 días",
+    "text": "para hacerlo sin pensar"
+   },
+   "visual": "un calendario con hojas que vuelan; una barra AUTOMÁTICO se llena hasta arriba",
+   "keys": [
+    {
+     "id": "stat",
+     "at": 38,
+     "sfx": [
+      "ding",
+      "sparkle@0.1"
+     ],
+     "t": 17.24
+    }
+   ],
+   "t0": 15.67,
+   "t1": 20.15
+  },
+  {
+   "id": "some",
+   "from": 44,
+   "type": "stat",
+   "label": "EL QUE MÁS TARDÓ",
+   "title": "¿Y algunos? ¡254!",
+   "highlight": "254",
+   "stat": {
+    "value": "254",
+    "text": "días: más de 8 meses"
+   },
+   "visual": "una grilla de puntos: 66 verdes y luego se llena hasta 254 en naranja; un caracol avanza abajo",
+   "keys": [
+    {
+     "id": "stat",
+     "at": 46,
+     "sfx": "whoosh",
+     "t": 23.16
+    }
+   ],
+   "t0": 20.15,
+   "t1": 24.73
+  },
+  {
+   "id": "skip",
+   "from": 47,
+   "type": "comparison",
+   "label": "LO QUE DESCUBRIERON",
+   "title": "Saltarse un día no arruina nada",
+   "highlight": "nada",
+   "visual": "fila 1: todos los días marcados menos uno, la barra se llena en verde; fila 2: días a ratos, la barra se corta en rojo",
+   "keys": [
+    {
+     "id": "skip",
+     "at": 49,
+     "sfx": "click",
+     "t": 26.28
+    },
+    {
+     "id": "ok",
+     "at": 54,
+     "sfx": "ding",
+     "t": 27.56
+    },
+    {
+     "id": "ratos",
+     "at": 62,
+     "sfx": "boing",
+     "t": 30.04
+    }
+   ],
+   "t0": 24.73,
+   "t1": 31.17
+  },
+  {
+   "id": "tip",
+   "from": 63,
+   "type": "process",
+   "label": "SI TE CUESTA",
+   "title": "No estás fallando: vas a la mitad",
+   "highlight": "mitad",
+   "visual": "un calendario 3 SEMANAS; una persona camina sobre una barra de progreso hasta una bandera en el 50%",
+   "keys": [
+    {
+     "id": "weeks",
+     "at": 67,
+     "sfx": "pop",
+     "t": 32.64
+    },
+    {
+     "id": "half",
+     "at": 79,
+     "sfx": [
+      "ding",
+      "sparkle@0.1"
+     ],
+     "t": 37.36
+    }
+   ],
+   "t0": 31.17,
+   "t1": 38.45
+  },
+  {
+   "id": "const",
+   "from": 80,
+   "type": "comparison",
+   "label": "LA CLAVE",
+   "title": "Constancia, no perfección",
+   "highlight": "Constancia",
+   "visual": "una estrella dorada PERFECTO se tacha con una X; a la derecha una persona sube una escalera escalón a escalón",
+   "keys": [
+    {
+     "id": "perf",
+     "at": 83,
+     "sfx": "snip",
+     "t": 39.4
+    },
+    {
+     "id": "const",
+     "at": 85,
+     "sfx": "boing",
+     "t": 41.34
+    }
+   ],
+   "t0": 38.45,
+   "t1": 43.43
+  },
+  {
+   "id": "closing",
+   "from": 86,
+   "type": "closing",
+   "label": "O SEA",
+   "title": "No son 21 días: son 2 meses",
+   "highlight": "meses",
+   "visual": "el calendario 21 se tacha; aparecen dos calendarios MES 1 y MES 2; burbujas de comentarios",
+   "keys": [
+    {
+     "id": "no21",
+     "at": 90,
+     "sfx": "snip",
+     "t": 44.86
+    },
+    {
+     "id": "months",
+     "at": 96,
+     "sfx": "pop",
+     "t": 47.8
+    },
+    {
+     "id": "comments",
+     "at": 102,
+     "sfx": "pop",
+     "t": 52.64
+    }
+   ],
+   "t0": 43.43,
+   "t1": 54
+  }
+ ],
+ "duration": 54
+}

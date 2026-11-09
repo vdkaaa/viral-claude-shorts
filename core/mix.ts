@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Shared final step: the style's video (no audio) + the voice + the music -> final.mp4 ready to upload.
-//   usage: node core/mix.ts videos/<topic> <silent-video.mp4> [--music -16]
+//   usage: node core/mix.ts canales/<canal>/videos/<topic> <silent-video.mp4> [--music -16]
 //   The music sits "--music" dB under the voice and ducks a bit more while you talk (sidechain);
 //   everything is normalized to -14 LUFS (what YouTube / TikTok / Reels expect).
-//   writes videos/<topic>/final.mp4 (H.264 + AAC, 1080x1920) and mix.wav
+//   writes canales/<canal>/videos/<topic>/final.mp4 (H.264 + AAC, 1080x1920) and mix.wav
 import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -12,7 +12,7 @@ const argv = process.argv.slice(2);
 const opt = (k: string, d: number) => { const i = argv.indexOf(k); return i >= 0 ? argv.splice(i, 2)[1] : d; };
 const MUS = Number(opt('--music', -16)), SFXDB = Number(opt('--sfx', -7));
 const [dir, video] = argv;   // without a video: writes only mix.wav (what the live preview plays)
-if (!dir) { console.error('usage: node core/mix.ts videos/<topic> [<video.mp4>] [--music -16] [--sfx -7]'); process.exit(2); }
+if (!dir) { console.error('usage: node core/mix.ts canales/<canal>/videos/<topic> [<video.mp4>] [--music -16] [--sfx -7]'); process.exit(2); }
 const ROOT = path.resolve(dir);
 const voice = ['audio.wav', 'audio.mp3', 'audio.m4a'].map((f) => path.join(ROOT, f)).find((f) => fs.existsSync(f));
 if (!voice) { console.error(`there is no audio.wav, audio.mp3 or audio.m4a in ${dir}: a video without voice is watched in the preview, not rendered`); process.exit(1); }

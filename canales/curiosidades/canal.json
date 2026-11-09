@@ -1,0 +1,34 @@
+{
+  "nombre": "(por definir: ej. Tu Cuerpo Sabe)",
+  "nicho": "Datos curiosos del ser humano (cuerpo, mente y hábitos) que dejan una enseñanza fácil de aplicar",
+  "idioma": "es",
+  "estilo": "flat2d",
+  "voz": {
+    "id": "K3TeN3ZVK8WnOeJ0NYqZ",
+    "modelo": "eleven_v3",
+    "acento": "latino neutro",
+    "tono": "profe joven y entusiasta que te cuenta algo que te sirve hoy"
+  },
+  "metricool": {
+    "blogId": null,
+    "timezone": "America/Santiago"
+  },
+  "redes": {
+    "instagram": null,
+    "youtube": null,
+    "tiktok": null
+  },
+  "horarios": {
+    "instagram": "10:00",
+    "youtube": "16:00"
+  },
+  "videosPorSemana": 3,
+  "hashtagsBase": [
+    "#datoscuriosos",
+    "#curiosidades",
+    "#cuerpohumano",
+    "#psicologia",
+    "#aprendeentiktok"
+  ],
+  "guionModelo": null
+}

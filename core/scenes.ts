@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Pipeline step 3: validates the visual plan (scenes.json) and stamps it with the real timings taken from the voice.
-//   usage: node core/scenes.ts videos/<topic>
+//   usage: node core/scenes.ts canales/<canal>/videos/<topic>
 // The agent writes scenes.json pointing at WORDS (the # indices from the analysis), not at seconds:
 // {
 //   "style": "flat2d",                          // the style: a folder in styles/
@@ -14,7 +14,7 @@
 //       "highlight": "duro",                   // word of the title that gets highlighted
 //       "stat": { "value": "60 °C", "text": "y el almidón se suelta" },   // bottom card (optional)
 //       "visual": "a surprised loaf of bread on a cutting board",        // what gets drawn (the style implements it)
-//       "asset": "logo.png",                   // optional: a file from videos/<topic>/assets/
+//       "asset": "logo.png",                   // optional: a file from canales/<canal>/videos/<topic>/assets/
 //       "keys": [ { "id": "crack", "at": 5 } ],  // moments inside the scene (when word #5 is said);
 //                                                // none closer than 0.7 s to the end of the scene: the animation must finish
 //       "transition": "cut" }                  // how this scene ENTERS: always "cut" for now
@@ -28,7 +28,7 @@ import path from 'node:path';
 import type { Plan, Words } from './types.ts';
 
 const dir = process.argv[2];
-if (!dir) { console.error('usage: node core/scenes.ts videos/<topic>'); process.exit(2); }
+if (!dir) { console.error('usage: node core/scenes.ts canales/<canal>/videos/<topic>'); process.exit(2); }
 const ROOT = path.resolve(dir), REPO = path.resolve(import.meta.dirname, '..');
 const file = path.join(ROOT, 'scenes.json');
 const E: Plan = JSON.parse(fs.readFileSync(file, 'utf8'));

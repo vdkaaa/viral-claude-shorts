@@ -1,0 +1,28 @@
+{
+  "nombre": "(nombre de la cuenta)",
+  "nicho": "(de qué trata, en una línea)",
+  "idioma": "es",
+  "estilo": "flat2d",
+  "voz": {
+    "id": null,
+    "modelo": "eleven_v3",
+    "acento": "latino neutro",
+    "tono": "(cómo suena: amigo que cuenta un chisme, profe entusiasta, narrador épico…)"
+  },
+  "metricool": {
+    "blogId": null,
+    "timezone": "America/Santiago"
+  },
+  "redes": {
+    "instagram": null,
+    "youtube": null,
+    "tiktok": null
+  },
+  "horarios": {
+    "instagram": "10:00",
+    "youtube": "16:00"
+  },
+  "videosPorSemana": 3,
+  "hashtagsBase": [],
+  "guionModelo": null
+}

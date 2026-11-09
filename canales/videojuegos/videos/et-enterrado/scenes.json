@@ -1,0 +1,206 @@
+{
+ "style": "flat2d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Videojuegos: el juego E.T. de Atari (1982), hecho en ~5 semanas para Navidad, fracasó; en 1983 Atari enterró cartuchos sobrantes (de varios juegos) en un basurero de Alamogordo, Nuevo México; en 2014 se excavó y se recuperaron ~1.300 cartuchos; algunos están en museos. Arte flat2d ORIGINAL: NO dibujar a E.T. ni el logo de Atari (nombres solo como texto); cartuchos genéricos, desierto, cactus, camión, pila de cartuchos, cartel, excavadora, vitrina de museo. Paleta del canal: morado oscuro, neones; escenas de desierto en tonos arena.",
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "MISTERIO",
+   "title": "Videojuegos enterrados en el desierto",
+   "highlight": "enterrados",
+   "visual": "dunas de desierto suben; cartuchos asoman de la arena; un cactus",
+   "keys": [
+    {
+     "id": "desert",
+     "at": 2,
+     "sfx": "whoosh",
+     "t": 0.4
+    },
+    {
+     "id": "buried",
+     "at": 11,
+     "sfx": [
+      "pop",
+      "pop@0.12",
+      "pop@0.24"
+     ],
+     "t": 3.6
+    }
+   ],
+   "t0": 0,
+   "t1": 5.37
+  },
+  {
+   "id": "et",
+   "from": 13,
+   "type": "object",
+   "label": "1982",
+   "title": "Hecho en solo cinco semanas",
+   "highlight": "semanas",
+   "visual": "un cartucho gigante con la etiqueta E.T.; un platillo volador genérico; un calendario 5 SEMANAS; un arbolito de Navidad",
+   "keys": [
+    {
+     "id": "release",
+     "at": 16,
+     "sfx": "pop",
+     "t": 7.48
+    },
+    {
+     "id": "alien",
+     "at": 24,
+     "sfx": "whoosh",
+     "t": 10.22
+    },
+    {
+     "id": "weeks",
+     "at": 29,
+     "sfx": "pop",
+     "t": 12.46
+    },
+    {
+     "id": "xmas",
+     "at": 32,
+     "sfx": "jingle",
+     "t": 13.78
+    }
+   ],
+   "t0": 5.37,
+   "t1": 14.87
+  },
+  {
+   "id": "flop",
+   "from": 35,
+   "type": "comparison",
+   "label": "EL PROBLEMA",
+   "title": "Cartuchos que nadie quería",
+   "highlight": "nadie",
+   "visual": "un jugador confundido con signos de pregunta; un estante se llena de cartuchos; un sello SIN VENDER",
+   "keys": [
+    {
+     "id": "confused",
+     "at": 38,
+     "sfx": "boing",
+     "t": 15.88
+    },
+    {
+     "id": "shops",
+     "at": 47,
+     "sfx": "click",
+     "t": 19.1
+    },
+    {
+     "id": "nobody",
+     "at": 53,
+     "sfx": "punch",
+     "t": 21.08
+    }
+   ],
+   "t0": 14.87,
+   "t1": 22.11
+  },
+  {
+   "id": "dump",
+   "from": 55,
+   "type": "process",
+   "label": "1983",
+   "title": "Al basurero de Nuevo México",
+   "highlight": "basurero",
+   "visual": "un camión llega por el desierto, levanta la tolva y tira una montaña de cartuchos; aparece un cartel NUEVO MÉXICO",
+   "keys": [
+    {
+     "id": "trucks",
+     "at": 59,
+     "sfx": "whoosh",
+     "t": 23.98
+    },
+    {
+     "id": "dump",
+     "at": 62,
+     "sfx": "tape",
+     "t": 25.8
+    },
+    {
+     "id": "place",
+     "at": 70,
+     "sfx": "pop",
+     "t": 28.58
+    }
+   ],
+   "t0": 22.11,
+   "t1": 29.57
+  },
+  {
+   "id": "legend",
+   "from": 72,
+   "type": "stat",
+   "label": "2014",
+   "title": "Era leyenda… hasta que excavaron",
+   "highlight": "excavaron",
+   "stat": {
+    "value": "1.300",
+    "text": "cartuchos encontrados"
+   },
+   "visual": "signos de pregunta flotan sobre el desierto de noche; una excavadora cava y salen cartuchos volando del hoyo",
+   "keys": [
+    {
+     "id": "legend",
+     "at": 79,
+     "sfx": "sparkle",
+     "t": 31.74
+    },
+    {
+     "id": "dig",
+     "at": 84,
+     "sfx": "punch",
+     "t": 33.76
+    },
+    {
+     "id": "stat",
+     "at": 88,
+     "sfx": "pop",
+     "t": 36.1
+    }
+   ],
+   "t0": 29.57,
+   "t1": 38.25
+  },
+  {
+   "id": "closing",
+   "from": 91,
+   "type": "closing",
+   "label": "O SEA",
+   "title": "De la basura… al museo",
+   "highlight": "museo",
+   "visual": "un sello PEOR JUEGO; una vitrina de museo con el cartucho iluminado por un foco; burbujas de comentarios",
+   "keys": [
+    {
+     "id": "worst",
+     "at": 96,
+     "sfx": "punch",
+     "t": 39.88
+    },
+    {
+     "id": "museum",
+     "at": 104,
+     "sfx": [
+      "ding",
+      "sparkle@0.1"
+     ],
+     "t": 42.2
+    },
+    {
+     "id": "comments",
+     "at": 114,
+     "sfx": "pop",
+     "t": 46.12
+    }
+   ],
+   "t0": 38.25,
+   "t1": 47.6
+  }
+ ],
+ "duration": 47.6
+}

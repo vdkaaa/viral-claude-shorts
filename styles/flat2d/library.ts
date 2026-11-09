@@ -48,6 +48,34 @@ function f2Person(id: string, x: number, y: number, s = 1) {   // a simple perso
     <circle cx="0" cy="-50" r="52" fill="#f2c29b"/><path d="M-52 -60 Q0 -130 52 -60 Q30 -90 0 -88 Q-30 -90 -52 -60Z" fill="#3b2a24"/>
     <circle cx="14" cy="-62" r="7" fill="${F2.night}"/><circle cx="-14" cy="-62" r="7" fill="${F2.night}"/><path d="M-12 -36 Q0 -26 12 -36" stroke="${F2.night}" stroke-width="5" fill="none" stroke-linecap="round"/></g></g>`;
 }
+// a detailed person (same friendly face as f2Person): eyebrows, nose, ears, fuller hair, shirt with collar and buttons,
+// sleeves and hands, belt, pants and white sneakers. Origin at the chest top like f2Person: head centre (0,-50), feet at ~226.
+// Parts: .eyes (blink), .armL / .armR (pivots -54 14 / 54 14)
+function f2Me(id: string, x: number, y: number, s = 1, shirt: string = F2.red, hair = '#3b2a24', pants = '#3f5aa6', skin = '#f2c29b') {
+  const SKD = '#e3a77b';
+  return `<g id="${id}"><g transform="translate(${x} ${y}) scale(${s})">
+    <ellipse cx="0" cy="228" rx="66" ry="10" fill="#000" opacity="0.2"/>
+    <rect x="-38" y="114" width="33" height="98" rx="12" fill="${pants}"/><rect x="5" y="114" width="33" height="98" rx="12" fill="${pants}"/>
+    <rect x="-22" y="130" width="4" height="74" rx="2" fill="#000" opacity="0.15"/><rect x="20" y="130" width="4" height="74" rx="2" fill="#000" opacity="0.15"/>
+    <path d="M-48 204 L-4 204 Q4 204 4 214 L4 222 L-54 222 Q-58 210 -48 204Z" fill="#fff"/><rect x="-56" y="217" width="60" height="9" rx="4" fill="#8d99ae"/>
+    <path d="M4 204 L48 204 Q58 210 54 222 L-4 222 L-4 214 Q-4 204 4 204Z" fill="#fff"/><rect x="-4" y="217" width="60" height="9" rx="4" fill="#8d99ae"/>
+    <g class="armL"><rect x="-68" y="6" width="26" height="62" rx="13" fill="${shirt}"/><rect x="-65" y="56" width="20" height="54" rx="10" fill="${skin}"/><circle cx="-55" cy="114" r="14" fill="${skin}"/></g>
+    <g class="armR"><rect x="42" y="6" width="26" height="62" rx="13" fill="${shirt}"/><rect x="45" y="56" width="20" height="54" rx="10" fill="${skin}"/><circle cx="55" cy="114" r="14" fill="${skin}"/></g>
+    <rect x="-48" y="0" width="96" height="128" rx="32" fill="${shirt}"/><path d="M12 0 Q48 0 48 32 L48 96 Q48 128 12 128Z" fill="#000" opacity="0.12"/>
+    <rect x="-46" y="104" width="92" height="16" fill="#2b2d42"/><rect x="-10" y="105" width="20" height="14" rx="3" fill="${F2.yellow}"/>
+    ${[38, 62, 86].map((by) => `<circle cx="0" cy="${by}" r="4" fill="#fff" opacity="0.8"/>`).join('')}
+    <rect x="-12" y="-10" width="24" height="18" fill="${SKD}"/>
+    <path d="M-24 -2 L0 24 L-6 -2Z M24 -2 L0 24 L6 -2Z" fill="#fff"/>
+    <circle cx="-52" cy="-46" r="11" fill="${SKD}"/><circle cx="52" cy="-46" r="11" fill="${SKD}"/>
+    <circle cx="0" cy="-50" r="52" fill="${skin}"/>
+    <path d="M-54 -50 Q-60 -110 -6 -112 Q46 -116 56 -64 Q58 -48 50 -40 Q46 -76 18 -84 Q-10 -70 -40 -80 Q-50 -66 -50 -42 Q-56 -44 -54 -50Z" fill="${hair}"/>
+    <path d="M-26 -96 L-4 -100" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+    <path d="M-24 -76 L-6 -78 M6 -78 L24 -76" stroke="${hair}" stroke-width="5" stroke-linecap="round"/>
+    <g class="eyes"><circle cx="14" cy="-62" r="7" fill="${F2.night}"/><circle cx="-14" cy="-62" r="7" fill="${F2.night}"/><circle cx="16" cy="-64" r="2.5" fill="#fff"/><circle cx="-12" cy="-64" r="2.5" fill="#fff"/></g>
+    <path d="M0 -56 Q6 -46 0 -44" stroke="${SKD}" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M-12 -34 Q0 -24 12 -34" stroke="${F2.night}" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="-30" cy="-38" r="8" fill="#ff9aa2" opacity="0.5"/><circle cx="30" cy="-38" r="8" fill="#ff9aa2" opacity="0.5"/></g></g>`;
+}
 // pops an element in (scale 0 -> 1 with a little bounce): the most common entrance
 const f2Pop = (tl: gsap.core.Timeline, sel: string, t: number, d = 0.45) => tl.fromTo(sel, { scale: 0, transformOrigin: '50% 50%' }, { scale: 1, duration: d, ease: 'back.out(2)' }, t);
 
